@@ -1,0 +1,152 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "aileron", sans-serif;
+  font-weight: 200;
+  background-color: #f3f3f3;
+  color: #39442d;
+}
+
+/* Header */
+header {
+  background: #e5dfd1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 60px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /*gap: 0.5rem;*/
+  height: 100%;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #285746;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1b3e32;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  background: #39442d;
+  color: #fff;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-image {
+  flex: 1 1 50%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+  padding: 3rem;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #285746;
+}
+
+/* Fresh Section */
+.fresh {
+  text-align: left;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.fresh h3 {
+  color: #285746;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.fresh p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #285746;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+.socials a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+  filter: invert(1);
+  transition: transform 0.3s;
+}
+
+.socials a img:hover {
+  transform: scale(1.2);
+}
