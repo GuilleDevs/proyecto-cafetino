@@ -202,3 +202,119 @@ footer p {
 .socials a img:hover {
   transform: scale(1.2);
 }
+/* =========================
+   MEDIA QUERIES RESPONSIVE
+========================= */
+
+/* ---- Tablets (hasta 1024px) ---- */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .hero-contenedor {
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 90%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .fresh {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
+
+/* ---- Celulares (hasta 768px) ---- */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .hero-contenedor {
+    padding: 1rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .fresh {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
