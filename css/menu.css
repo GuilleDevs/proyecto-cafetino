@@ -4,9 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-header {
-    width: 100%;
-}
+
 body {
   font-family: "aileron", sans-serif;
   background-color: #e5dfd1;
@@ -19,6 +17,16 @@ body {
 }
 
 /* --- NABVAR --- */
+
+.navbar {
+ font-family: "aileron", sans-serif;
+}
+
+.navbar .nav-link {
+  color: #39442D !important; /* el !important asegura que sobreescriba el color de Bootstrap */
+  font-weight: 600;
+}
+
 .container {
   max-width: 100%;
   margin: auto;
