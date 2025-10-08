@@ -14,7 +14,9 @@ body {
 
 
 /*Categorias*/
-
+.contenedor {
+   min-height: 100vh;
+}
 .categorias-top {
     position: relative;
     display: flex;
