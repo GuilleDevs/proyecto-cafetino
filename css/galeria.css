@@ -44,7 +44,7 @@ body {
   .spancategoria {
     font: 700 4em/1;
     font-size: 1.35cm;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "aileron", sans-serif;
   letter-spacing: 0;
   padding: 10px;
   display:flex;
@@ -56,21 +56,10 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
 
-  /* Animate Background Image */
-
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: aitf 80s linear infinite;
-
-  /* Activate hardware acceleration for smoother animations */
-
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-backface-visibility: hidden;
+  
   }
 
-  @-webkit-keyframes aitf {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-  }
+ 
 
   .categorias-top .contenedor-categorias {
     position: relative;
@@ -85,9 +74,9 @@ body {
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
   }
 
-  .categorias-top .contenedor-categorias:hover {
-    height: 400px;
-  }
+  .categorias-top .contenedor-categorias.activo {
+  height: 400px;
+}
 
   .categorias-top .contenedor-categorias .imagen-caja {
     position: absolute;
@@ -100,11 +89,11 @@ body {
     transition: 0.5s;
   }
 
-  .categorias-top .contenedor-categorias:hover .imagen-caja {
-    top: -80px;
-    scale: 0.75;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-  }
+  .categorias-top .contenedor-categorias.activo .imagen-caja {
+  top: -80px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
 
   .categorias-top .contenedor-categorias .imagen-caja img {
     position: absolute;
@@ -126,21 +115,22 @@ body {
     transition: 0.5s;
   }
 
-  .categorias-top .contenedor-categorias:hover .carta-categoria {
-    top: 125px;
-    height: 300px;
-  }
+  .categorias-top .contenedor-categorias.activo .carta-categoria {
+  top: 125px;
+  height: 300px;
+}
 
   .categorias-top .contenedor-categorias .carta-categoria h2 {
-    font-size: 150%;
+    font-size: 140%;
     font-weight: 600;
     color: #000000;
+    font-family: "aileron", sans-serif;
   }
 
   .categorias-top .contenedor-categorias .carta-categoria p {
-    color: #333;
-    font-size: 110%;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 120%;
+    font-family: "aileron", sans-serif;
   }
 
 
@@ -166,4 +156,297 @@ footer p {
 
 .socials a img:hover {
   transform: scale(1.2);
+}
+
+.modal-oculto {
+    display: none; /* Inicia oculto */
+    position: fixed; /* Se queda fijo en la ventana */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Fondo semitransparente oscuro */
+    transition: opacity 0.3s;
+}
+
+.modal-visible {
+    display: flex; /* Muestra el modal */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centra verticalmente */
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%; /* Ancho del contenido dentro del modal */
+    max-width: 800px; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    display: flex;
+    gap: 30px;
+    animation: zoomIn 0.3s ease-out;
+}
+
+/* Animación de entrada para el modal */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-imagen-caja {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    /* AÑADIR ESTO: Transición de 0.3 segundos a la opacidad */
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.modal-imagen-caja img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* AÑADIR ESTO: Transición de 0.3 segundos a la opacidad */
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.modal-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: "aileron", sans-serif;
+}
+
+.modal-info p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    font-family: "aileron", sans-serif;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para las flechas del Carrusel (Ajustadas a los extremos de la pantalla) */
+.flecha {
+    cursor: pointer;
+    position: fixed; /* CLAVE: Ahora se posicionan respecto a la ventana del navegador */
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white; /* Flechas blancas para el fondo oscuro */
+    font-weight: bold;
+    font-size: 180%;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: transparent; /* CLAVE: Sin fondo */
+    z-index: 1002;
+    text-shadow: 0 0 5px black; /* Sombra sutil para que destaquen más */
+}
+
+.flecha-anterior {
+    left: 5%; /* Separación del borde izquierdo */
+    border-radius: 3px 0 0 3px; /* Sin borde en este caso, se puede quitar */
+}
+
+.flecha-siguiente {
+    right: 5%; /* Separación del borde derecho */
+    border-radius: 0 3px 3px 0; /* Sin borde en este caso, se puede quitar */
+}
+
+.flecha:hover {
+    color: #ccc; /* Se aclaran un poco al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.4); /* Añadimos un fondo sutil al pasar el mouse */
+}
+
+/* Ajuste: Mueve el contenido del modal un poco para que las flechas no estorben */
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 30px; /* Puedes volver a 30px sin el extra para las flechas */
+    border-radius: 15px;
+    width: 80%; 
+    max-width: 800px; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    display: flex;
+    gap: 30px;
+    animation: zoomIn 0.3s ease-out;
+    position: relative; /* Aseguramos que se mantenga el position relative si lo necesitas para otros elementos internos */
+}
+
+/* Posición de la X para que quede arriba */
+.cerrar-modal {
+    color: black; /* Cambia a negro para que se vea sobre el fondo blanco del modal */
+    top: 5px;
+    right: 15px;
+    font-size: 35px;
+    z-index: 1003;
+    background-color: transparent; /* Asegura que no tenga fondo */
+}
+
+.modal-contenido-oculto {
+    opacity: 0 !important;
+}
+
+/* --- ESTILOS PARA REPLICAR LA IMAGEN "ALMARIS" (HERO SECTION) --- */
+
+.hero-almaris {
+    /* **1. Fondo de la Sección** */
+    /* Asegúrate de reemplazar 'ruta/a/tu/imagen-de-fondo.jpg' con tu propia ruta */
+    background-image: url('../images/DSC00772.JPG'); /* Usa una imagen de fondo oscura */
+    background-size: cover;
+    background-position: center bottom; /* El centro abajo parece ser la posición en la imagen */
+    background-attachment: fixed; /* Opcional: para un efecto parallax suave */
+    
+    /* **2. Dimensiones** */
+    height: 500px; /* Ajusta la altura según necesites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necesario para posicionar el overlay */
+}
+
+/* **3. Capa Oscura (Overlay)** */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Fondo semi-transparente negro que crea el efecto oscuro/misterioso */
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* **4. Contenido de Texto** */
+.hero-content {
+    color: #ffffff; /* Texto siempre blanco */
+    text-align: center;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    /* La imagen original usa una fuente tipo Serif (como Times New Roman),
+       pero usamos Aileron según tu indicación */
+    font-family: "aileron", sans-serif;
+    font-weight: 300; /* Ligero */
+    font-size: 4em;
+    margin-bottom: 5px;
+    letter-spacing: 5px; /* Espaciado entre letras */
+    text-transform: uppercase;
+}
+
+/* **5. Línea Decorativa Debajo del Título** */
+.hero-title::after {
+    content: '';
+    display: block;
+    width: 150px; 
+    height: 2px;
+    background-color: #ffffff; 
+    margin: 10px auto 30px auto; /* Centrar y dar espacio */
+    opacity: 0.6; /* Sutil */
+}
+
+.hero-subtitle {
+    font-family: "aileron", sans-serif;
+    font-weight: 200; /* Extra ligero */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-breadcrumbs {
+    font-family: "aileron", sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* --- ESTILOS PARA LA BARRA DE NAVEGACIÓN TRANSPARENTE --- */
+
+.nav-transparente {
+    /* 1. Transparencia y Flotación */
+    background-color: transparent !important;
+    position: absolute; /* CLAVE: La hace flotar sobre el contenido */
+    z-index: 1050; 
+    top: 0;
+    left: 0;
+    padding-top: 20px; 
+}
+
+/* 2. Estilo de los enlaces (Navbar-dark de Bootstrap lo hace blanco) */
+.nav-transparente .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important; /* Blanco semi-transparente */
+    font-weight: 400;
+    font-size: 0.95rem; /* Ajuste sutil */
+    transition: color 0.3s;
+}
+
+.nav-transparente .navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+/* 3. Ajuste para el logo (si es oscuro) */
+.nav-transparente .cafetino {
+    /* Si tu GIF es oscuro, usa este filtro para que se vea blanco sobre el fondo */
+    filter: brightness(0) invert(1); 
+    height: 40px; 
+}
+
+/* 4. Ajuste del Hero para que el contenido no quede debajo del Nav */
+.hero-almaris {
+    /* Asegúrate de que esta URL sea correcta */
+    background-image: url('../images/DSC00766\ \(1\).JPG'); 
+    
+    /* Estas dos líneas son las que hacen que la imagen se adapte */
+    background-size: cover;
+    background-position: center bottom;
+    
+    /* CLAVE: Asegúrate de que NO esté esta línea: 
+       background-attachment: fixed; 
+       Si está presente, elimínala o coméntala (//) */
+    
+    height: 520px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 100px; /* Para que el contenido no quede debajo del nav */
 }
