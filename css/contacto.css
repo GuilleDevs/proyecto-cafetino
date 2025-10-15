@@ -12,34 +12,56 @@ body {
   color: #39442d;
 }
 
-/* Header 
-header {
-  background: #e5dfd1;
-  height: 60px;
-}*/
-
+/* ===== NAVBAR GENERAL ===== */
 .navbar {
- font-family: "aileron", sans-serif;
- background-color: #E5DFD1;
+  background-color: #E5DFD1; /* beige */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.navbar .nav-link {
-  color: #39442D !important; /* el !important asegura que sobreescriba el color de Bootstrap */
-  font-weight: 600;
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
 }
-.header__navbar-efecto {
+
+/* ===== LOGO ===== */
+.navbar__logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* ===== LINKS ===== */
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  color: #063a34; /* verde oscuro */
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+  color: #a76b32; /* marrón */
+}
+.navbar-efecto {
     color: #39442D;
     font-weight: bold;
     display: inline-block;
     position: relative;
   }
-  .header__navbar {
-    display: inline-block;
-    position: relative;
-    color: #1b3e32;
-  }
-
-  .header__navbar-efecto::after, .header__navbar::after {
+.navbar-efecto::after, .header__navbar::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -51,22 +73,21 @@ header {
     transform-origin:bottom right;
     transition: transform 0.4s ease-out;
   }
-  .header__navbar-efecto:hover::after, .header__navbar:hover::after {
+  .navbar-efecto:hover::after, .header__navbar:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  .navbar {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    color: #1b3e32;
-  }
-  
-  .navbar-nav .nav-link {
-  white-space: nowrap; /* evita que el texto se divida en dos líneas */
-  }
-  .cafetino {
-  width: 30%;
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #063a34;
+  cursor: pointer;
 }
 
 main {
@@ -132,6 +153,7 @@ main {
     width: 300px;
     height: 200px;
     margin-top: 20px;
+    padding-top: 40px;
   }
   
   .section-contacto__article--conteiner-contacto:hover {
@@ -179,26 +201,244 @@ main {
     margin-bottom: 30px;
   }
 
-/* Footer */
-footer {
-  background: #39442d;
+/* ===== FOOTER GENERAL ===== */
+.footer {
+  background-color: #39442d;
   color: #fff;
+  font-family: "aileron", sans-serif;
+  font-weight: 600;
   text-align: center;
-  padding: 1rem;
+  padding-top: 40px;
 }
 
-footer p {
-  margin-bottom: 0.5rem;
+/* ===== CONTENIDO PRINCIPAL ===== */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.socials a img {
-  width: 24px;
-  height: 24px;
-  margin: 0 0.5rem;
-  filter: invert(1);
-  transition: transform 0.3s;
+/* ===== SECCIONES ===== */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  text-align:center;
 }
 
-.socials a img:hover {
-  transform: scale(1.2);
+.footer-section h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #fff;
 }
+
+.footer-section p {
+  font-size: 13px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* ===== CENTRO ===== */
+.footer-center {
+  text-align: center;
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+/* ===== REDES SOCIALES ===== */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #bfa14a;
+}
+
+/* ===== LÍNEA INFERIOR ===== */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 15px 10px;
+  background-color: #39442d;
+}
+
+.footer-bottom p {
+  color: #cfcfcf;
+  font-size: 12px;
+}
+/* =========================
+  MEDIA QUERIES RESPONSIVE NAVBAR
+========================= */
+
+/* --- TABLET Y CELULAR --- */
+@media (max-width: 900px) {
+  .navbar__container {
+    flex-wrap: wrap;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar__links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9e3d4;
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar__links a {
+    padding: 0.8rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Mostrar menú al activar el checkbox */
+  .menu-toggle:checked + .menu-icon + .navbar__links {
+    display: flex;
+  }
+}
+/* =========================
+   RESPONSIVE MAIN CONTACTO
+========================= */
+
+/* --- TABLETS (hasta 1024px) --- */
+@media (max-width: 1024px) {
+  .main__vista-principal--contacto {
+    height: 500px;
+    background-position: center;
+  }
+
+  .main__vista-principal--titulo-contacto {
+    font-size: 3rem;
+    padding-top: 160px;
+  }
+
+  .main__vista-principal--titulo-contacto-span {
+    font-size: 2.5rem;
+  }
+
+  .section-contacto {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .section-contacto__article--conteiner-contacto {
+    width: 260px;
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  .section-mapa iframe {
+    width: 90%;
+    height: 400px;
+  }
+}
+
+/* --- CELULARES GRANDES (hasta 768px) --- */
+@media (max-width: 768px) {
+  .main__vista-principal--contacto {
+    height: 400px;
+    background-position: center;
+  }
+
+  .main__vista-principal--titulo-contacto {
+    font-size: 2.2rem;
+    padding-top: 120px;
+  }
+
+  .main__vista-principal--titulo-contacto-span {
+    font-size: 1.8rem;
+  }
+
+  .section-contacto {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .section-contacto__article--conteiner-contacto {
+    width: 200px;
+    height: 100%;
+    padding: 25px 10px;
+  }
+
+  .section-contacto__article--icon {
+    font-size: 3rem;
+  }
+
+  .section-encuentranos__titulo {
+    font-size: 2rem;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .section-encuentranos__titulo-span {
+    font-size: 1.6rem;
+  }
+
+  .section-mapa iframe {
+    width: 90%;
+    height: 320px;
+  }
+}
+
+/* --- CELULARES PEQUEÑOS (hasta 480px) --- */
+@media (max-width: 480px) {
+  .main__vista-principal--contacto {
+    height: 350px;
+  }
+
+  .main__vista-principal--titulo-contacto {
+    font-size: 1.8rem;
+    padding-top: 100px;
+  }
+
+  .main__vista-principal--titulo-contacto-span {
+    font-size: 1.4rem;
+  }
+
+  .section-contacto__article--conteiner-contacto {
+    width: 200px;
+    height: 100%;
+  }
+
+  .section-contacto__article--icon {
+    font-size: 2.5rem;
+  }
+
+  .section-encuentranos__titulo {
+    font-size: 1.5rem;
+  }
+
+  .section-encuentranos__titulo-span {
+    font-size: 1.3rem;
+  }
+
+  .section-mapa iframe {
+    width: 95%;
+    height: 250px;
+  }
+}
+

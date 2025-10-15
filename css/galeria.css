@@ -12,6 +12,83 @@ body {
   color: #39442d;
 }
 
+/* ===== NAVBAR GENERAL ===== */
+.navbar {
+  background-color: #E5DFD1; /* beige */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+}
+
+/* ===== LOGO ===== */
+.navbar__logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* ===== LINKS ===== */
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  color: #063a34; /* verde oscuro */
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+  color: #a76b32; /* marrón */
+}
+.navbar-efecto {
+    color: #39442D;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+  }
+.navbar-efecto::after, .header__navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #BB8F60;
+    transform: scaleX(0);
+    transform-origin:bottom right;
+    transition: transform 0.4s ease-out;
+  }
+  .navbar-efecto:hover::after, .header__navbar:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #063a34;
+  cursor: pointer;
+}
 
 /*Categorias*/
 .contenedor {
@@ -132,31 +209,6 @@ body {
     font-size: 120%;
     font-family: "aileron", sans-serif;
   }
-
-
-/* Footer */
-footer {
-  background: #39442d;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-
-footer p {
-  margin-bottom: 0.5rem;
-}
-
-.socials a img {
-  width: 24px;
-  height: 24px;
-  margin: 0 0.5rem;
-  filter: invert(1);
-  transition: transform 0.3s;
-}
-
-.socials a img:hover {
-  transform: scale(1.2);
-}
 
 .modal-oculto {
     display: none; /* Inicia oculto */
@@ -449,4 +501,86 @@ footer p {
     align-items: center;
     position: relative;
     padding-top: 100px; /* Para que el contenido no quede debajo del nav */
+}
+/* ===== FOOTER GENERAL ===== */
+.footer {
+  background-color: #39442d;
+  color: #fff;
+  font-family: "aileron", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== SECCIONES ===== */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  text-align:center;
+}
+
+.footer-section h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 13px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* ===== CENTRO ===== */
+.footer-center {
+  text-align: center;
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+/* ===== REDES SOCIALES ===== */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #bfa14a;
+}
+
+/* ===== LÍNEA INFERIOR ===== */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 15px 10px;
+  background-color: #39442d;
+}
+
+.footer-bottom p {
+  color: #cfcfcf;
+  font-size: 12px;
 }

@@ -16,28 +16,56 @@ body {
   min-height: 100vh;
 }
 
-/* --- NABVAR --- */
-
+/* ===== NAVBAR GENERAL ===== */
 .navbar {
- font-family: "aileron", sans-serif;
+  background-color: #E5DFD1; /* beige */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.navbar .nav-link {
-  color: #39442D !important; /* el !important asegura que sobreescriba el color de Bootstrap */
-  font-weight: 600;
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
 }
-.header__navbar-efecto {
+
+/* ===== LOGO ===== */
+.navbar__logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* ===== LINKS ===== */
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  color: #063a34; /* verde oscuro */
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+  color: #a76b32; /* marrón */
+}
+.navbar-efecto {
     color: #39442D;
     font-weight: bold;
     display: inline-block;
     position: relative;
   }
-  .header__navbar {
-    display: inline-block;
-    position: relative;
-    color: #1b3e32;
-  }
-  .header__navbar-efecto::after, .header__navbar::after {
+.navbar-efecto::after, .header__navbar::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -49,33 +77,21 @@ body {
     transform-origin:bottom right;
     transition: transform 0.4s ease-out;
   }
-  .header__navbar-efecto:hover::after, .header__navbar:hover::after {
+  .navbar-efecto:hover::after, .header__navbar:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  .navbar-nav .nav-link {
-  white-space: nowrap; /* evita que el texto se divida en dos líneas */
-  }
-/*.container {
-  max-width: 100%;
-  margin: auto;
-  height: 100%;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+  display: none;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  /* gap: 0.5rem; 
-  height: 100%;
-  width: auto;
-} */
-
-.cafetino {
-  width: 30%;
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #063a34;
+  cursor: pointer;
 }
 
 
@@ -89,6 +105,7 @@ body {
   padding: 3rem 2rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
 }
 
 /* --- CABECERA --- */
@@ -156,30 +173,163 @@ body {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-  .menu-container {
-    padding: 2rem 1.2rem;
+/* ===== FOOTER GENERAL ===== */
+.footer {
+  background-color: #39442d;
+  color: #fff;
+  font-family: "aileron", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 40px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== SECCIONES ===== */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  text-align:center;
+}
+
+.footer-section h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 13px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* ===== CENTRO ===== */
+.footer-center {
+  text-align: center;
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+/* ===== REDES SOCIALES ===== */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #bfa14a;
+}
+
+/* ===== LÍNEA INFERIOR ===== */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 15px 10px;
+  background-color: #39442d;
+}
+
+.footer-bottom p {
+  color: #cfcfcf;
+  font-size: 12px;
+}
+
+/* =========================
+  MEDIA QUERIES RESPONSIVE NAVBAR
+========================= */
+
+/* --- TABLET Y CELULAR --- */
+@media (max-width: 900px) {
+  .navbar__container {
+    flex-wrap: wrap;
   }
 
-  .menu-section {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar__links {
+    width: 100%;
+    display: none;
     flex-direction: column;
     align-items: center;
+    background-color: #e9e3d4;
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
   }
 
-  .menu-column {
+  .navbar__links a {
+    padding: 0.8rem 0;
     width: 100%;
-    max-width: 400px;
+    text-align: center;
+  }
+   /* Mostrar menú al activar el checkbox */
+  .menu-toggle:checked + .menu-icon + .navbar__links {
+    display: flex;
+  }
+  .hero {
+    margin-top: 100px;
+  }
+  /* --- MEDIA QUERIES --- */
+
+/* === Tablets (pantallas medianas) === */
+@media (max-width: 992px) {
+  .menu-container {
+    width: 95%;
+    padding: 2rem 1.5rem;
   }
 
   .menu-header h1 {
     font-size: 1.8rem;
   }
+
+  .menu-header h2 {
+    font-size: 0.9rem;
+  }
+
+  .menu-section {
+    gap: 2rem;
+  }
+
+  .menu-column {
+    min-width: 200px;
+  }
+
+  .menu-column h3 {
+    font-size: 0.95rem;
+  }
 }
 
-@media (max-width: 480px) {
-  .menu-header .menu-icon {
-    font-size: 2.5rem;
+/* === Celulares (pantallas pequeñas) === */
+@media (max-width: 600px) {
+  .menu-container {
+    width: 95%;
+    padding: 1.5rem 1rem;
+    border-width: 8px;
   }
 
   .menu-header h1 {
@@ -187,10 +337,45 @@ body {
   }
 
   .menu-header h2 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  .divider {
+    width: 80%;
+  }
+
+  .menu-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .menu-column {
+    width: 100%;
+  }
+
+  .menu-column h3 {
+    font-size: 1rem;
   }
 
   .menu-column li {
     font-size: 0.9rem;
   }
+}
+
+/* === Muy pequeñas (menos de 400px) === */
+@media (max-width: 400px) {
+  .menu-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .menu-header h2 {
+    font-size: 0.75rem;
+  }
+
+  .menu-column li {
+    font-size: 0.85rem;
+  }
+}
 }
