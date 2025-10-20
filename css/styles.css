@@ -73,10 +73,10 @@ body {
     transform-origin:bottom right;
     transition: transform 0.4s ease-out;
   }
-  .navbar-efecto:hover::after, .header__navbar:hover::after {
+.navbar-efecto:hover::after, .header__navbar:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
 
 /* ===== MENÚ HAMBURGUESA ===== */
 .menu-toggle {
@@ -167,6 +167,8 @@ main {
   background: #39442d;
   position: relative;
   z-index: 1;
+  font-family: "aileron", sans-serif;
+  font-weight: 400;
 }
 
 .hero-text h2 {
@@ -175,7 +177,7 @@ main {
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
