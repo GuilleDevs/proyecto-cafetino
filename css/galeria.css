@@ -1,66 +1,68 @@
 /* General */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "aileron", sans-serif;
-  font-weight: 200;
-  background-color: #f3f3f3;
-  color: #39442d;
+    font-family: "aileron", sans-serif;
+    font-weight: 200;
+    background-color: #f3f3f3;
+    color: #39442d;
 }
 
 /* ===== NAVBAR GENERAL ===== */
 .navbar {
-  background-color: #E5DFD1; /* beige */
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #E5DFD1; /* beige */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
 }
 
 /* ===== LOGO ===== */
 .navbar__logo img {
-  height: 60px;
-  width: auto;
+    height: 60px;
+    width: auto;
 }
 
 /* ===== LINKS ===== */
 .navbar__links {
-  display: flex;
-  gap: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .navbar__links a {
-  color: #063a34; /* verde oscuro */
-  text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
+    color: #063a34; /* verde oscuro */
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
 .navbar__links a:hover {
-  color: #a76b32; /* marrón */
+    color: #a76b32; /* marrón */
 }
+
+/* Efecto Hover para Links */
 .navbar-efecto {
     color: #39442D;
     font-weight: bold;
     display: inline-block;
     position: relative;
-  }
+}
 .navbar-efecto::after, .header__navbar::after {
     content: "";
     position: absolute;
@@ -72,402 +74,573 @@ body {
     transform: scaleX(0);
     transform-origin:bottom right;
     transition: transform 0.4s ease-out;
-  }
-  .navbar-efecto:hover::after, .header__navbar:hover::after {
+}
+.navbar-efecto:hover::after, .header__navbar:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
 
 /* ===== MENÚ HAMBURGUESA ===== */
 .menu-toggle {
-  display: none;
+    display: none;
 }
 
 .menu-icon {
-  display: none;
-  font-size: 2rem;
-  color: #063a34;
-  cursor: pointer;
+    display: none; /* Oculto en escritorio */
+    font-size: 2rem;
+    color: #063a34;
+    cursor: pointer;
 }
 
-/*Categorias*/
-.contenedor {
-  min-height: 100vh;
-}
-.categorias-top {
+/* =====================================
+   ESTILOS DE LA GALERÍA Y LIGHTBOX
+   (Incluye la responsividad original)
+   ===================================== */
+
+/* Estilos generales y líneas decorativas */
+.gallery-section {
     position: relative;
+    max-width: 1300px; 
+    margin: 40px auto;
+    padding: 0 50px; /* Espacio para las líneas decorativas */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 60px 50px;
-    padding-top: 60px;
-    padding-bottom: 80px;
-  }
-
-  .categorias-top .categoriash1 {
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: .5em;
-    border: 4px double rgba(0, 0, 0, 0.25);
-    border-width: 4px 0;
-    padding: 0px;
-    top: 18%;
-    left: 50%;
-    width: 100%;
-  
-  }
-
-  .spancategoria {
-    font: 700 4em/1;
-    font-size: 1.35cm;
-    font-family: "aileron", sans-serif;
-  letter-spacing: 0;
-  padding: 10px;
-  display:flex;
-  justify-content: center;
-  margin: 0 auto;
-  text-shadow: 0 0 80px black;
-  color: transparent;
-  background: black; /* Cambia el fondo del texto a negro */
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  
-  }
-
- 
-
-  .categorias-top .contenedor-categorias {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 320px;
-    height: 300px;
-    background-color: #FFF;
-    border-radius: 20px;
-    transition: 0.5s;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-  }
-
-  .categorias-top .contenedor-categorias.activo {
-  height: 400px;
+    align-items: center;
+    /* Añadido para solucionar el solapamiento con el fixed navbar */
+    margin-top: 100px; 
 }
 
-  .categorias-top .contenedor-categorias .imagen-caja {
+/* Líneas finitas de la izquierda y derecha */
+.decorative-line {
     position: absolute;
-    top: 20px;
-    width: 280px;
-    height: 220px;
-    background: #333 ;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.5s;
-  }
-
-  .categorias-top .contenedor-categorias.activo .imagen-caja {
-  top: -80px;
-  scale: 0.75;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-}
-
-  .categorias-top .contenedor-categorias .imagen-caja img {
-    position: absolute;
+    width: 3px; /* Grosor de la línea */
+    height: 100%;
+    background-color: #b9b9b9; /* Color gris claro */
     top: 0;
-    left: 0;
+}
+
+.decorative-line.left {
+    left: 20px; 
+}
+
+.decorative-line.right {
+    right: 20px; 
+}
+
+/* Estilo de la cuadrícula (Desktop) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+    gap: 15px; 
+    width: 100%;
+}
+
+/* Estilo individual de cada ítem */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Fuerza una relación de aspecto casi cuadrada como en la imagen */
+    aspect-ratio: 1 / 1; 
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
-  }
-
-  .categorias-top .contenedor-categorias .carta-categoria {
-    position: absolute;
-    top: 252px;
-    width: 100%;
-    height: 35px;
-    padding: 0 30px;
-    text-align: center;
-    overflow: hidden;
-    transition: 0.5s;
-  }
-
-  .categorias-top .contenedor-categorias.activo .carta-categoria {
-  top: 125px;
-  height: 300px;
+    transition: transform 0.3s ease; 
 }
 
-  .categorias-top .contenedor-categorias .carta-categoria h2 {
-    font-size: 140%;
-    font-weight: 600;
-    color: #000000;
-    font-family: "aileron", sans-serif;
-  }
+/* Overlay para el efecto hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease;
+}
 
-  .categorias-top .contenedor-categorias .carta-categoria p {
-    color: #000000;
-    font-size: 120%;
-    font-family: "aileron", sans-serif;
-  }
+.view-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+}
 
-.modal-oculto {
-    display: none; /* Inicia oculto */
-    position: fixed; /* Se queda fijo en la ventana */
-    z-index: 1000; /* Asegura que esté por encima de todo */
+/* EFECTO HOVER */
+.gallery-item:hover .overlay {
+    opacity: 1; 
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); 
+}
+
+/* --- ESTILOS DEL MODAL (LIGHTBOX) --- */
+
+.lightbox-hidden {
+    display: none !important; /* Importante para que el JS lo oculte */
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8); /* Fondo semitransparente oscuro */
-    transition: opacity 0.3s;
-}
-
-.modal-visible {
-    display: flex; /* Muestra el modal */
+    background-color: rgba(0, 0, 0, 0.9); 
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-contenido {
-    background-color: #fefefe;
-    margin: 15% auto; /* Centra verticalmente */
-    padding: 30px;
-    border-radius: 15px;
-    width: 80%; /* Ancho del contenido dentro del modal */
-    max-width: 800px; 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-    display: flex;
-    gap: 30px;
-    animation: zoomIn 0.3s ease-out;
-}
-
-/* Animación de entrada para el modal */
-@keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.modal-imagen-caja {
-    flex: 1;
-    max-width: 50%;
-    border-radius: 10px;
-    overflow: hidden;
-    
-    /* AÑADIR ESTO: Transición de 0.3 segundos a la opacidad */
-    transition: opacity 0.3s ease-in-out; 
-}
-
-.modal-imagen-caja img {
-    width: 100%;
-    height: auto;
+#lightbox-image {
+    max-width: 80%;
+    max-height: 90vh; 
     display: block;
 }
 
-.modal-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    /* AÑADIR ESTO: Transición de 0.3 segundos a la opacidad */
-    transition: opacity 0.3s ease-in-out; 
-}
-
-.modal-info h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    font-family: "aileron", sans-serif;
-}
-
-.modal-info p {
-    font-size: 1.1em;
-    line-height: 1.5;
-    font-family: "aileron", sans-serif;
-}
-
-.cerrar-modal {
+.lightbox-close {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 35px;
-    color: #f1f1f1;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
-    z-index: 1001;
 }
 
-.cerrar-modal:hover,
-.cerrar-modal:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Estilos para las flechas del Carrusel (Ajustadas a los extremos de la pantalla) */
-.flecha {
-    cursor: pointer;
-    position: fixed; /* CLAVE: Ahora se posicionan respecto a la ventana del navegador */
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white; /* Flechas blancas para el fondo oscuro */
-    font-weight: bold;
-    font-size: 180%;
-    transition: 0.6s ease;
-    user-select: none;
-    background-color: transparent; /* CLAVE: Sin fondo */
-    z-index: 1002;
-    text-shadow: 0 0 5px black; /* Sombra sutil para que destaquen más */
-}
-
-.flecha-anterior {
-    left: 5%; /* Separación del borde izquierdo */
-    border-radius: 3px 0 0 3px; /* Sin borde en este caso, se puede quitar */
-}
-
-.flecha-siguiente {
-    right: 5%; /* Separación del borde derecho */
-    border-radius: 0 3px 3px 0; /* Sin borde en este caso, se puede quitar */
-}
-
-.flecha:hover {
-    color: #ccc; /* Se aclaran un poco al pasar el mouse */
-    background-color: rgba(0, 0, 0, 0.4); /* Añadimos un fondo sutil al pasar el mouse */
-}
-
-/* Ajuste: Mueve el contenido del modal un poco para que las flechas no estorben */
-.modal-contenido {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 30px; /* Puedes volver a 30px sin el extra para las flechas */
-    border-radius: 15px;
-    width: 80%; 
-    max-width: 800px; 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-    display: flex;
-    gap: 30px;
-    animation: zoomIn 0.3s ease-out;
-    position: relative; /* Aseguramos que se mantenga el position relative si lo necesitas para otros elementos internos */
-}
-
-/* Posición de la X para que quede arriba */
-.cerrar-modal {
-    color: black; /* Cambia a negro para que se vea sobre el fondo blanco del modal */
-    top: 5px;
-    right: 15px;
-    font-size: 35px;
-    z-index: 1003;
-    background-color: transparent; /* Asegura que no tenga fondo */
-}
-
-.modal-contenido-oculto {
-    opacity: 0 !important;
-}
-
-/* --- ESTILOS PARA REPLICAR LA IMAGEN "ALMARIS" (HERO SECTION) --- */
-
-.hero-almaris {
-    /* **1. Fondo de la Sección** */
-    /* Asegúrate de reemplazar 'ruta/a/tu/imagen-de-fondo.jpg' con tu propia ruta */
-    background-image: url('../images/DSC00772.JPG'); /* Usa una imagen de fondo oscura */
-    background-size: cover;
-    background-position: center bottom; /* El centro abajo parece ser la posición en la imagen */
-    background-attachment: fixed; /* Opcional: para un efecto parallax suave */
-    
-    /* **2. Dimensiones** */
-    height: 500px; /* Ajusta la altura según necesites */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Necesario para posicionar el overlay */
-}
-
-/* **3. Capa Oscura (Overlay)** */
-.hero-overlay {
+/* Botones de navegación (flechas) */
+.lightbox-nav {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Fondo semi-transparente negro que crea el efecto oscuro/misterioso */
-    background-color: rgba(0, 0, 0, 0.4); 
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 16px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.lightbox-nav.prev {
+    left: 10px;
+}
+
+.lightbox-nav.next {
+    right: 10px;
+}
+
+/* =====================================
+   ESTILOS DE OTRAS SECCIONES (Hero y Footer)
+   ===================================== */
+
+/* Estilos para Hero (asumiendo que tiene la clase hero-almaris) */
+.hero-almaris {
+    background-size: cover;
+    background-position: center bottom;
+    height: 520px; 
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding-top: 100px; 
 }
 
-/* **4. Contenido de Texto** */
-.hero-content {
-    color: #ffffff; /* Texto siempre blanco */
+
+/* Footer General */
+.footer {
+    background-color: #39442d;
+    color: #fff;
+    font-family: "aileron", sans-serif;
+    font-weight: 600;
     text-align: center;
-    max-width: 700px;
-    padding: 0 20px;
+    padding-top: 40px;
 }
 
-.hero-title {
-    /* La imagen original usa una fuente tipo Serif (como Times New Roman),
-       pero usamos Aileron según tu indicación */
-    font-family: "aileron", sans-serif;
-    font-weight: 300; /* Ligero */
-    font-size: 4em;
-    margin-bottom: 5px;
-    letter-spacing: 5px; /* Espaciado entre letras */
-    text-transform: uppercase;
+/* Contenido Principal */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-/* **5. Línea Decorativa Debajo del Título** */
-.hero-title::after {
-    content: '';
-    display: block;
-    width: 150px; 
-    height: 2px;
-    background-color: #ffffff; 
-    margin: 10px auto 30px auto; /* Centrar y dar espacio */
-    opacity: 0.6; /* Sutil */
+/* Secciones */
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    text-align:center;
 }
 
-.hero-subtitle {
-    font-family: "aileron", sans-serif;
-    font-weight: 200; /* Extra ligero */
-    font-size: 1.1em;
+.footer-section h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section p {
+    font-size: 13px;
+    color: #cfcfcf;
     line-height: 1.6;
-    margin-bottom: 25px;
 }
 
-.hero-breadcrumbs {
-    font-family: "aileron", sans-serif;
-    font-weight: 400;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    opacity: 0.8;
+/* Centro */
+.footer-center {
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
 }
 
-/* --- ESTILOS PARA LA BARRA DE NAVEGACIÓN TRANSPARENTE --- */
+.footer-logo {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+/* Redes Sociales */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #bfa14a;
+}
+
+/* Línea Inferior */
+.footer-bottom {
+    border-top: 1px solid #2a2a2a;
+    padding: 15px 10px;
+    background-color: #39442d;
+}
+
+.footer-bottom p {
+    color: #cfcfcf;
+    font-size: 12px;
+}
+
+/* =====================================
+   MEDIA QUERIES RESPONSIVE
+   ===================================== */
+
+/* --- TABLET Y CELULAR (max-width: 900px) --- */
+@media (max-width: 900px) {
+    /* Navbar */
+    .navbar__container {
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar__links {
+        width: 100%;
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        background-color: #e9e3d4;
+        padding: 1rem 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .navbar__links a {
+        padding: 0.8rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Mostrar menú al activar el checkbox */
+    .menu-toggle:checked + .menu-icon + .navbar__links {
+        display: flex;
+    }
+    
+    .hero {
+        margin-top: 100px;
+    }
+    
+    /* Footer: Apilar secciones */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .footer-section {
+        margin-bottom: 25px;
+        min-width: unset; 
+    }
+}
+
+
+/* --- TABLET GRANDE (max-width: 768px) --- */
+@media (max-width: 768px) {
+    /* --- Galería --- */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        gap: 10px;
+    }
+    
+    .gallery-section {
+        padding: 0 15px; 
+    }
+    
+    /* Ocultar las líneas decorativas en tablet y móvil */
+    .decorative-line {
+        display: none;
+    }
+
+    /* --- Hero Section (ajustes de la sección anterior) --- */
+    .hero-title {
+        font-size: 2.5rem; 
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* --- Categorías Section (ajustes de la sección anterior) --- */
+    .categorias-top {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 30px;
+    }
+
+    .categoriash1 {
+        font-size: 1.8rem;
+    }
+
+    .contenedor-categorias {
+        flex-direction: row; 
+    }
+
+    .modal-contenido {
+        margin: 10% auto; 
+        max-width: 95%;
+        width: 600px;
+    }
+
+    .carta-categoria h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Media queries de Menú (anteriormente anidadas incorrectamente) */
+    .menu-container {
+        width: 95%;
+        padding: 2rem 1.5rem;
+    }
+
+    .menu-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-header h2 {
+        font-size: 0.9rem;
+    }
+
+    .menu-section {
+        gap: 2rem;
+    }
+
+    .menu-column {
+        min-width: 200px;
+    }
+
+    .menu-column h3 {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* --- CELULAR (max-width: 600px) --- */
+@media (max-width: 600px) {
+    /* Media queries de Menú (anteriormente anidadas incorrectamente) */
+    .menu-container {
+        width: 95%;
+        padding: 1.5rem 1rem;
+        border-width: 8px;
+    }
+
+    .menu-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-header h2 {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .divider {
+        width: 80%;
+    }
+
+    .menu-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .menu-column {
+        width: 100%;
+    }
+
+    .menu-column h3 {
+        font-size: 1rem;
+    }
+
+    .menu-column li {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* --- CELULAR PEQUEÑO (max-width: 480px) --- */
+@media (max-width: 480px) {
+    /* --- Galería --- */
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 columna en móvil */
+        gap: 8px;
+    }
+    
+    .view-text {
+        font-size: 1.1rem; /* Texto 'VER' más pequeño */
+        padding: 6px 12px;
+    }
+    
+    .lightbox-nav {
+        font-size: 30px;
+        padding: 8px;
+    }
+    
+    #lightbox-image {
+        max-width: 95%;
+    }
+
+    /* --- Hero Section (ajustes de la sección anterior) --- */
+    .hero-almaris {
+        height: 300px; 
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero-breadcrumbs {
+        font-size: 0.9rem;
+    }
+
+    /* --- Categorías Section (ajustes de la sección anterior) --- */
+    .contenedor {
+        padding: 0 15px;
+    }
+
+    .categoriash1 {
+        font-size: 1.5rem;
+    }
+
+    .contenedor-categorias {
+        flex-direction: column; /* Disposición vertical */
+    }
+
+    .imagen-caja,
+    .carta-categoria {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .carta-categoria {
+        padding: 15px; 
+    }
+    
+    .carta-categoria h2 {
+        font-size: 1.2rem;
+    }
+    .carta-categoria p {
+        font-size: 0.9rem;
+    }
+
+    /* --- Modal (ajustes de la sección anterior) --- */
+    .modal-contenido {
+        flex-direction: column; 
+        margin: 20px auto; 
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .modal-imagen-caja,
+    .modal-info {
+        flex-basis: 100%;
+        padding: 0;
+    }
+
+    .modal-imagen-caja {
+        margin-bottom: 15px;
+    }
+}
+
+/* === Muy pequeñas (menos de 400px) === */
+@media (max-width: 400px) {
+    .menu-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .menu-header h2 {
+        font-size: 0.75rem;
+    }
+
+    .menu-column li {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- ESTILOS PARA LA BARRA DE NAVEGACIÓN TRANSPARENTE (Si aplica) --- */
 
 .nav-transparente {
-    /* 1. Transparencia y Flotación */
     background-color: transparent !important;
-    position: absolute; /* CLAVE: La hace flotar sobre el contenido */
+    position: absolute; 
     z-index: 1050; 
     top: 0;
     left: 0;
     padding-top: 20px; 
 }
 
-/* 2. Estilo de los enlaces (Navbar-dark de Bootstrap lo hace blanco) */
 .nav-transparente .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.9) !important; /* Blanco semi-transparente */
+    color: rgba(255, 255, 255, 0.9) !important;
     font-weight: 400;
-    font-size: 0.95rem; /* Ajuste sutil */
+    font-size: 0.95rem; 
     transition: color 0.3s;
 }
 
@@ -475,112 +648,7 @@ body {
     color: white !important;
 }
 
-/* 3. Ajuste para el logo (si es oscuro) */
 .nav-transparente .cafetino {
-    /* Si tu GIF es oscuro, usa este filtro para que se vea blanco sobre el fondo */
     filter: brightness(0) invert(1); 
     height: 40px; 
-}
-
-/* 4. Ajuste del Hero para que el contenido no quede debajo del Nav */
-.hero-almaris {
-    /* Asegúrate de que esta URL sea correcta */
-    background-image: url('../images/DSC00766\ \(1\).JPG'); 
-    
-    /* Estas dos líneas son las que hacen que la imagen se adapte */
-    background-size: cover;
-    background-position: center bottom;
-    
-    /* CLAVE: Asegúrate de que NO esté esta línea: 
-       background-attachment: fixed; 
-       Si está presente, elimínala o coméntala (//) */
-    
-    height: 520px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding-top: 100px; /* Para que el contenido no quede debajo del nav */
-}
-/* ===== FOOTER GENERAL ===== */
-.footer {
-  background-color: #39442d;
-  color: #fff;
-  font-family: "aileron", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  padding-top: 40px;
-}
-
-/* ===== CONTENIDO PRINCIPAL ===== */
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* ===== SECCIONES ===== */
-.footer-section {
-  flex: 1;
-  min-width: 220px;
-  text-align:center;
-}
-
-.footer-section h4 {
-  font-size: 15px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.footer-section p {
-  font-size: 13px;
-  color: #cfcfcf;
-  line-height: 1.6;
-}
-
-/* ===== CENTRO ===== */
-.footer-center {
-  text-align: center;
-  flex: 1;
-  min-width: 220px;
-}
-
-.footer-logo {
-  font-size: 22px;
-  letter-spacing: 3px;
-  margin-bottom: 5px;
-}
-
-/* ===== REDES SOCIALES ===== */
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.footer-socials a {
-  color: #fff;
-  font-size: 15px;
-  transition: color 0.3s ease;
-}
-
-.footer-socials a:hover {
-  color: #bfa14a;
-}
-
-/* ===== LÍNEA INFERIOR ===== */
-.footer-bottom {
-  border-top: 1px solid #2a2a2a;
-  padding: 15px 10px;
-  background-color: #39442d;
-}
-
-.footer-bottom p {
-  color: #cfcfcf;
-  font-size: 12px;
 }
