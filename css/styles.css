@@ -192,7 +192,31 @@ main {
   border-radius: 4px;
   transition: all 0.3s ease;
 }
+/* Estilos del enlace dentro del botón */
+.btn a {
+  color: inherit;              /* Usa el color del botón (blanco) */
+  text-decoration: none;       /* Quita el subrayado */
+  display: inline-block;       /* Evita problemas de clic en el botón */
+  width: 100%;
+  height: 100%;
+}
+/* Al pasar el mouse */
+.btn:hover {
+  background: #fff;
+  color: #285746;
+}
 
+/* Asegura que el enlace dentro del hover cambie igual */
+.btn:hover a {
+  color: #285746;
+}
+
+/* Evita que cambie al ser visitado o clickeado */
+.btn a:visited,
+.btn a:active {
+  color: inherit;
+  text-decoration: none;
+}
 .btn:hover {
   background: #fff;
   color: #285746;
@@ -211,8 +235,8 @@ main {
 }
 
 .fresh p {
-  color: #666;
-  font-size: 1rem;
+  color: black;
+  font-size: 1.5rem;
 }
 
 /* ===== FOOTER GENERAL ===== */
@@ -263,7 +287,7 @@ main {
 }
 
 .footer-logo {
-  font-size: 22px;
+  font-size: 2rem;
   letter-spacing: 3px;
   margin-bottom: 5px;
 }
