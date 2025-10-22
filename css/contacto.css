@@ -92,14 +92,16 @@ body {
 
 main {
     padding-top: 80px;
+    background-image: url('../images/background\ contacto.jpg'); /* Ajustá la ruta según tu estructura */
+    background-size: cover;     /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    background-attachment: fixed; /* Hace que el fondo quede fijo al hacer scroll */
   }
   .main__vista-principal {
     width: 100%;
     height: 10rem;
     background-size: cover;
-
-    background-image: linear-gradient(100deg, #000000, #00000020), url(../images/portada\ 4.jpg);
-    background-image: linear-gradient(100deg, #000000, #00000020), url(../images/portada.jpg);
     background-position: center;
   }
   .main__vista-principal--titulo {
@@ -117,8 +119,7 @@ main {
   /*>>>> FIN HEADER <<<<*/
 
 .main__vista-principal--contacto {
-    background-image: url(../images/fondo-contacto.webp);
-    height: 600px;
+  height: auto;
     background-size: cover;
   }
   
@@ -136,7 +137,6 @@ main {
     font-weight: 500;
     line-height: 20px;
   }
-  
   .section-contacto {
     display: flex;
     flex-direction: row;
@@ -149,28 +149,33 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #D8D8D8;
-    width: 300px;
-    height: 200px;
+    border: 2px solid inherit;
+    width: 400px;
+    height: 300px;
     margin-top: 20px;
     padding-top: 40px;
   }
   
   .section-contacto__article--conteiner-contacto:hover {
-    border: 2px solid #515546;
+    border: 3px solid #515546;
   }
   
   .section-contacto__article--icon {
     color: #515546;
-    font-size: 4rem;
+    font-size: 5.5rem;
     text-align: center;
   }
   
   .section-contacto__article--parrafo {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
   }
-  
+  .section-contacto__article--numero-parrafo, 
+  .section-contacto__article--correo-parrafo, 
+  .section-contacto__article--calle-parrafo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
   .section-encuentranos__titulo {
     font-size: 3rem;
     margin-top: 50px;
@@ -186,21 +191,34 @@ main {
     line-height: 20px;
     padding-top: 15px;
   }
-  
+  .section-encuentranos__p-horarios{
+    padding-top: 40px;
+  }
   .section-encuentranos__p-horarios,
   .section-encuentranos__p-lu,
   .section-encuentranos__p-vi {
     text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
     margin-bottom: 20px;
   }
-  
-  .section-mapa {
+  .mapa {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
   }
-
+  .section-mapa {
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 1200px; /* límite máximo para pantallas grandes */
+  }
+  .section-mapa iframe {
+    width: 100%;
+    height: 600px; /* aumentamos el alto */
+    border: none;
+    border-radius: 10px; /* opcional, para esquinas suaves */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* opcional, da un efecto flotante */
+  }
 /* ===== FOOTER GENERAL ===== */
 .footer {
   background-color: #39442d;
@@ -322,10 +340,10 @@ main {
    RESPONSIVE MAIN CONTACTO
 ========================= */
 
-/* --- TABLETS (hasta 1024px) --- */
-@media (max-width: 1024px) {
+/* --- Escritorio (hasta 1440px) --- */
+@media (max-width: 1440px) {
   .main__vista-principal--contacto {
-    height: 500px;
+    height: 400px;
     background-position: center;
   }
 
@@ -349,27 +367,99 @@ main {
     height: auto;
     padding: 30px 15px;
   }
-
+  .section-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .section-mapa iframe {
     width: 90%;
-    height: 400px;
+    height: 450px; /* aumentamos el alto */
+  }
+}
+
+/* --- TABLETS (hasta 1024px) --- */
+@media (max-width: 1024px) {
+  .main__vista-principal--contacto {
+    height: 300px;
+    background-position: center;
+  }
+
+  .main__vista-principal--titulo-contacto {
+    font-size: 3rem;
+    padding-top: 160px;
+  }
+
+  .main__vista-principal--titulo-contacto-span {
+    font-size: 2.5rem;
+  }
+
+  .section-contacto {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .section-contacto__article--conteiner-contacto {
+    width: 260px;
+    height: auto;
+    padding: 30px 15px;
+  }
+  .section-contacto__article--parrafo {
+    font-size: 2rem;
+  }
+  .section-contacto__article--numero-parrafo,
+  .section-contacto__article--correo-parrafo,
+  .section-contacto__article--calle-parrafo {
+    font-size: 1.5rem;
+  }
+  
+
+  .section-contacto__article--icon {
+    font-size: 4rem;
+  }
+  .section-encuentranos__titulo {
+    font-size: 2.5rem;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .section-encuentranos__titulo-span {
+    font-size: 2rem;
+  }
+  .section-encuentranos__p-horarios {
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  .section-encuentranos__p-lu,
+  .section-encuentranos__p-vi {
+    font-weight: bold;
+  }
+  .section-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-mapa iframe {
+    width: 90%;
+    height: 450px; /* aumentamos el alto */
   }
 }
 
 /* --- CELULARES GRANDES (hasta 768px) --- */
 @media (max-width: 768px) {
   .main__vista-principal--contacto {
-    height: 400px;
+    height: 300px;
     background-position: center;
   }
 
   .main__vista-principal--titulo-contacto {
-    font-size: 2.2rem;
-    padding-top: 120px;
+    font-size: 2.5rem;
+    padding-top: 100px;
   }
 
   .main__vista-principal--titulo-contacto-span {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .section-contacto {
@@ -379,35 +469,56 @@ main {
   }
 
   .section-contacto__article--conteiner-contacto {
-    width: 200px;
-    height: 100%;
+    width: 250px;
+    height: 200px;
     padding: 25px 10px;
   }
 
-  .section-contacto__article--icon {
-    font-size: 3rem;
-  }
-
-  .section-encuentranos__titulo {
+  .section-contacto__article--parrafo {
     font-size: 2rem;
+  }
+  .section-contacto__article--numero-parrafo,
+  .section-contacto__article--correo-parrafo,
+  .section-contacto__article--calle-parrafo {
+    font-size: 1.5rem;
+  }
+  
+
+  .section-contacto__article--icon {
+    font-size: 4rem;
+  }
+  .section-encuentranos__titulo {
+    font-size: 2.5rem;
     margin-top: 40px;
     text-align: center;
   }
 
   .section-encuentranos__titulo-span {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
-
+  .section-encuentranos__p-horarios {
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  .section-encuentranos__p-lu,
+  .section-encuentranos__p-vi {
+    font-weight: bold;
+  }
+  .section-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .section-mapa iframe {
     width: 90%;
-    height: 320px;
+    height: 400px; /* aumentamos el alto */
   }
 }
 
 /* --- CELULARES PEQUEÑOS (hasta 480px) --- */
 @media (max-width: 480px) {
   .main__vista-principal--contacto {
-    height: 350px;
+    height: 250px;
   }
 
   .main__vista-principal--titulo-contacto {
@@ -418,7 +529,14 @@ main {
   .main__vista-principal--titulo-contacto-span {
     font-size: 1.4rem;
   }
-
+  .section-contacto__article--parrafo {
+    font-size: 1.3rem;
+  }
+  .section-contacto__article--numero-parrafo,
+  .section-contacto__article--correo-parrafo,
+  .section-contacto__article--calle-parrafo {
+    font-size: 1rem;
+  }
   .section-contacto__article--conteiner-contacto {
     width: 200px;
     height: 100%;
@@ -435,10 +553,19 @@ main {
   .section-encuentranos__titulo-span {
     font-size: 1.3rem;
   }
-
-  .section-mapa iframe {
-    width: 95%;
-    height: 250px;
+  .section-encuentranos__p-horarios {
+    font-weight: bold;
+    padding-top: 20px;
   }
+  .section-encuentranos__p-lu,
+  .section-encuentranos__p-vi {
+    font-weight: bold;
+  }
+  .mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 }
 
