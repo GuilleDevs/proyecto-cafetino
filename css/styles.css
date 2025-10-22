@@ -166,12 +166,6 @@ main {
   flex: 1 1 50%;
   padding: 3rem;
   background: #39442d;
-<<<<<<< HEAD
-=======
-
-  position: relative;
-  z-index: 1;
->>>>>>> 421f176e2cd626137bd65dc431148e84e63f4cc7
   font-family: "aileron", sans-serif;
   font-weight: 300;
   height: auto;
