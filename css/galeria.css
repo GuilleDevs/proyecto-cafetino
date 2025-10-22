@@ -100,14 +100,14 @@ body {
 /* Estilos generales y líneas decorativas */
 .gallery-section {
     position: relative;
-    max-width: 1300px; 
+    max-width: 1200px; 
     margin: 40px auto;
-    padding: 0 50px; /* Espacio para las líneas decorativas */
+    padding: 0 0px; /* Espacio para las líneas decorativas */
     display: flex;
     justify-content: center;
     align-items: center;
     /* Añadido para solucionar el solapamiento con el fixed navbar */
-    margin-top: 100px; 
+    margin-top: 120px; 
 }
 
 /* Líneas finitas de la izquierda y derecha */
@@ -132,7 +132,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
     gap: 15px; 
-    width: 100%;
+    width: 90%;
 }
 
 /* Estilo individual de cada ítem */
@@ -651,4 +651,99 @@ body {
 .nav-transparente .cafetino {
     filter: brightness(0) invert(1); 
     height: 40px; 
+}
+
+/* =====================================
+   NUEVOS ESTILOS PARA EL HERO DE GALERÍA
+   ===================================== */
+
+.hero-galeria {
+    /* Ajusta la altura a tu gusto */
+    height: 350px; 
+    /* Usa la imagen que desees de fondo. Ajusta la ruta si es necesario. */
+    background-image: url('../images/imagen portada.png'); 
+    background-size: cover;
+    background-position: center 50%; /* Puedes ajustar la posición vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    /* Para que quede debajo del navbar fixed */
+    margin-top: 80px; 
+    /* Efecto de oscurecimiento sobre la imagen */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+}
+
+.hero-galeria-content {
+    color: white;
+    padding: 20px;
+    z-index: 10;
+}
+
+.hero-galeria .hero-title {
+    font-family: "aileron", sans-serif;
+    font-weight: 700;
+    font-size: 4rem; 
+    margin-bottom: 0.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-galeria .hero-phrase {
+    font-family: "aileron", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* =====================================
+   AJUSTE DE LA GALERÍA
+   ===================================== */
+
+/* Ajustamos el margen superior de la galería para que quede pegada al nuevo hero */
+.gallery-section {
+    position: relative;
+    max-width: 1200px; 
+    margin: 40px auto;
+    padding: 0 0px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Se elimina el margen superior fijo que tenías para que se posicione correctamente bajo el nuevo hero */
+    margin-top: 40px; 
+}
+
+
+/* =====================================
+   MEDIA QUERIES PARA EL NUEVO HERO
+   ===================================== */
+
+@media (max-width: 768px) {
+    .hero-galeria {
+        height: 250px; 
+    }
+
+    .hero-galeria .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-galeria .hero-phrase {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-galeria {
+        height: 200px; 
+    }
+    
+    .hero-galeria .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-galeria .hero-phrase {
+        font-size: 1rem;
+    }
 }

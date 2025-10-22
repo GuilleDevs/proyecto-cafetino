@@ -10,19 +10,20 @@
   <link rel="stylesheet" href="https://use.typekit.net/pqq0ttv.css">
 </head>
 <body>
-  <!-- Encabezado -->
   <header class="navbar">
     <div class="navbar__container">
+<<<<<<< HEAD
       <!-- LOGO -->
       <a href="../index.html" class="navbar__logo">
+=======
+      <a href="#" class="navbar__logo">
+>>>>>>> 421f176e2cd626137bd65dc431148e84e63f4cc7
         <img src="../images/logo_basic (3).png" alt="Logo" />
       </a>
 
-      <!-- BOTÓN HAMBURGUESA -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <label for="menu-toggle" class="menu-icon">☰</label>
 
-      <!-- LINKS -->
       <nav class="navbar__links">
         <a href="../index.html"><span class="navbar-efecto">Inicio</span></a>
         <a href="./sobrenosotros.html"><span class="navbar-efecto">Sobre Nosotros</span></a>
@@ -30,50 +31,57 @@
         <a href="#"><span class="navbar-efecto">Galería</span></a>
         <a href="./contacto.html"><span class="navbar-efecto">Contacto</span></a>
       </nav>
+
     </div>
   </header>
-    
-    <section class="gallery-section">
+
+  <section class="hero-galeria">
+    <div class="hero-galeria-content">
+      <h1 class="hero-title">Cafetino</h1>
+      <p class="hero-phrase">El arte y la pasión en cada taza.</p>
+    </div>
+  </section>
+  <section class="gallery-section">
     <div class="decorative-line left"></div>
 
     <div class="gallery-grid">
-        <div class="gallery-item" data-index="0" data-src="../images/cafetera.JPG" data-alt="Cena en Restaurante">
-            <img src="../images/cafetera.JPG" alt="Cena en Restaurante">
+        <div class="gallery-item" data-index="0" data-src="../images/DSC00731.webp" data-alt="Cena en Restaurante">
+            <img src="../images/DSC00731.webp" alt="Cena en Restaurante">
             <div class="overlay">
                 <span class="view-text">VER</span>
             </div>
         </div>
         
-        <div class="gallery-item" data-index="1" data-src="../images/imagen portada.png" data-alt="Gimnasio">
-            <img src="../images/imagen portada.png" alt="Gimnasio">
+        <div class="gallery-item" data-index="1" data-src="../images/DSC00638.webp" data-alt="Gimnasio">
+            <img src="../images/DSC00638.webp" alt="Gimnasio">
             <div class="overlay">
                 <span class="view-text">VER</span>
             </div>
         </div>
         
-        <div class="gallery-item" data-index="2" data-src="../images/cafe.JPG" data-alt="Piscina">
-            <img src="../images/cafe.JPG" alt="Piscina">
+        <div class="gallery-item" data-index="2" data-src="../images/DSC00591.webp" data-alt="Piscina">
+            <img src="../images/DSC00591.webp" alt="Piscina">
             <div class="overlay">
                 <span class="view-text">VER</span>
             </div>
         </div>
 
-        <div class="gallery-item" data-index="3" data-src="../images/jugo.JPG" data-alt="Reunión de Negocios">
-            <img src="../images/jugo.JPG" alt="Reunión de Negocios">
+        <div class="gallery-item" data-index="3" data-src="../images/DSC00585.webp" data-alt="Reunión de Negocios">
+            <img src="../images/DSC00585.webp" alt="Reunión de Negocios">
             <div class="overlay">
                 <span class="view-text">VER</span>
             </div>
         </div>
 
-        <div class="gallery-item" data-index="4" data-src="../images/cafe grano (1).JPG" data-alt="Masaje y Spa">
-            <img src="../images/cafe grano (1).JPG" alt="Masaje y Spa">
+        <div class="gallery-item" data-index="4" data-src="../images/DSC00729.webp" data-alt="Masaje y Spa">
+            <img src="../images/DSC00729.webp" alt="Masaje y Spa">
             <div class="overlay">
                 <span class="view-text">VER</span>
             </div>
         </div>
 
-        <div class="gallery-item" data-index="5" data-src="../images/maquina grano.JPG" data-alt="Toallas Limpias">
-            <img src="../images/maquina grano.JPG" alt="Toallas Limpias">
+        <div class="gallery-item" data-index="5" data-src="../images/DSC00690.webp" data-alt="Toallas Limpias">
+            <img src="../images/DSC00690.webp" alt="Toallas Limpias">
             <div class="overlay">
                 <span class="view-text">VER</span>
             </div>
@@ -83,16 +91,19 @@
     <div class="decorative-line right"></div>
 </section>
 
+
+
 <div id="lightbox" class="lightbox-hidden">
-    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-close">×</span>
     <img id="lightbox-image" src="../images/Cafetino 2018.jpg" alt="Imagen en grande">
-    <a id="prev-btn" class="lightbox-nav prev">&#10094;</a> 
-    <a id="next-btn" class="lightbox-nav next">&#10095;</a>
+    <a id="prev-btn" class="lightbox-nav prev">❮</a> 
+    <a id="next-btn" class="lightbox-nav next">❯</a>
 </div>
 <script src="../java/galeria.js"></script>
+
+
   
-<!-- Footer -->
-  <footer class="footer">
+<footer class="footer">
   <div class="footer-content">
     <div class="footer-section">
       <h4>Dirección</h4>
@@ -122,4 +133,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
-
