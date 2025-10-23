@@ -1,131 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria | Cafetino</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="../css/galeria.css">
-  
-  <link rel="stylesheet" href="https://use.typekit.net/pqq0ttv.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | Cafetino</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/galeria.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" /> 
+    
+    <link rel="stylesheet" href="https://use.typekit.net/pqq0ttv.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="navbar__container">
-      <!-- LOGO -->
-      <a href="../index.html" class="navbar__logo">
-        <img src="../images/logo_basic (3).png" alt="Logo" />
-      </a>
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="../index.html" class="navbar__logo">
+                <img src="../images/logo_basic (3).png" alt="Logo Cafetino" />
+            </a>
 
-      <input type="checkbox" id="menu-toggle" class="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">☰</label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
 
-      <nav class="navbar__links">
-        <a href="../index.html"><span class="navbar-efecto">Inicio</span></a>
-        <a href="./sobrenosotros.html"><span class="navbar-efecto">Sobre Nosotros</span></a>
-        <a href="./menu.html"><span class="navbar-efecto">Menú</span></a>
-        <a href="#"><span class="navbar-efecto">Galería</span></a>
-        <a href="./contacto.html"><span class="navbar-efecto">Contacto</span></a>
-      </nav>
+            <nav class="navbar__links">
+                <a href="../index.html"><span class="navbar-efecto">Inicio</span></a>
+                <a href="./sobrenosotros.html"><span class="navbar-efecto">Sobre Nosotros</span></a>
+                <a href="./menu.html"><span class="navbar-efecto">Menú</span></a>
+                <a href="#"><span class="navbar-efecto">Galería</span></a>
+                <a href="./contacto.html"><span class="navbar-efecto">Contacto</span></a>
+            </nav>
 
-    </div>
-  </header>
-
-  <section class="hero-galeria">
-    <div class="hero-galeria-content">
-      <h1 class="hero-title">Cafetino</h1>
-      <p class="hero-phrase">El arte y la pasión en cada taza.</p>
-    </div>
-  </section>
-  <section class="gallery-section">
-    <div class="decorative-line left"></div>
-
-    <div class="gallery-grid">
-        <div class="gallery-item" data-index="0" data-src="../images/DSC00731.webp" data-alt="Cena en Restaurante">
-            <img src="../images/DSC00731.webp" alt="Cena en Restaurante">
-            <div class="overlay">
-                <span class="view-text">VER</span>
-            </div>
         </div>
-        
-        <div class="gallery-item" data-index="1" data-src="../images/DSC00638.webp" data-alt="Gimnasio">
-            <img src="../images/DSC00638.webp" alt="Gimnasio">
-            <div class="overlay">
-                <span class="view-text">VER</span>
-            </div>
-        </div>
-        
-        <div class="gallery-item" data-index="2" data-src="../images/DSC00591.webp" data-alt="Piscina">
-            <img src="../images/DSC00591.webp" alt="Piscina">
-            <div class="overlay">
-                <span class="view-text">VER</span>
-            </div>
-        </div>
+    </header>
 
-        <div class="gallery-item" data-index="3" data-src="../images/DSC00585.webp" data-alt="Reunión de Negocios">
-            <img src="../images/DSC00585.webp" alt="Reunión de Negocios">
-            <div class="overlay">
-                <span class="view-text">VER</span>
-            </div>
+    <section class="hero-galeria">
+        <div class="hero-galeria-content">
+            <h1 class="hero-title">Cafetino</h1>
+            <p class="hero-phrase">El arte y la pasión en cada taza.</p>
         </div>
-
-        <div class="gallery-item" data-index="4" data-src="../images/DSC00729.webp" data-alt="Masaje y Spa">
-            <img src="../images/DSC00729.webp" alt="Masaje y Spa">
-            <div class="overlay">
-                <span class="view-text">VER</span>
-            </div>
-        </div>
-
-        <div class="gallery-item" data-index="5" data-src="../images/DSC00690.webp" data-alt="Toallas Limpias">
-            <img src="../images/DSC00690.webp" alt="Toallas Limpias">
-            <div class="overlay">
-                <span class="view-text">VER</span>
-            </div>
-        </div>
-    </div>
+    </section>
     
-    <div class="decorative-line right"></div>
-</section>
+    <section class="gallery-section">
+        <div class="decorative-line left"></div>
 
+        <h2 class="gallery-title">Seleccion de la Casa</h2>
 
+        <div class="gallery-grid">
+            <div class="gallery-item" data-index="0" data-src="../images/DSC00731.webp" data-alt="Tostada con palta y huevo sobre mesa de madera" data-aos="fade-right" data-aos-delay="0">
+                <img src="../images/DSC00731.webp" alt="Tostada con palta y huevo sobre mesa de madera">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-index="1" data-src="../images/DSC00638.webp" data-alt="Vista desde la calle de la fachada y mesas de Cafetino" data-aos="fade-up" data-aos-delay="100">
+                <img src="../images/DSC00638.webp" alt="Vista desde la calle de la fachada y mesas de Cafetino">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-index="2" data-src="../images/DSC00591.webp" data-alt="Taza amarilla con latte art de corazón en plato" data-aos="fade-left" data-aos-delay="200">
+                <img src="../images/DSC00591.webp" alt="Taza amarilla con latte art de corazón en plato">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
 
-<div id="lightbox" class="lightbox-hidden">
-    <span class="lightbox-close">×</span>
-    <img id="lightbox-image" src="../images/Cafetino 2018.jpg" alt="Imagen en grande">
-    <a id="prev-btn" class="lightbox-nav prev">❮</a> 
-    <a id="next-btn" class="lightbox-nav next">❯</a>
-</div>
-<script src="../java/galeria.js"></script>
+            <div class="gallery-item" data-index="3" data-src="../images/DSC00585.webp" data-alt="Detalle de variedad de croissants y pastelería en vitrina" data-aos="fade-right" data-aos-delay="0">
+                <img src="../images/DSC00585.webp" alt="Detalle de variedad de croissants y pastelería en vitrina">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
 
+            <div class="gallery-item" data-index="4" data-src="../images/DSC00729.webp" data-alt="Paquete de café en grano especial de Cafetino" data-aos="fade-up" data-aos-delay="100">
+                <img src="../images/DSC00729.webp" alt="Paquete de café en grano especial de Cafetino">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
 
-  
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-section">
-      <h4>Dirección</h4>
-      <p>Av. San Martín 688<br>General Pico, La Pampa</p>
+            <div class="gallery-item" data-index="5" data-src="../images/DSC00690.webp" data-alt="Máquina tostadora de café industrial" data-aos="fade-left" data-aos-delay="200">
+                <img src="../images/DSC00690.webp" alt="Máquina tostadora de café industrial">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="decorative-line right"></div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="decorative-line left"></div>
+
+        <h2 class="gallery-title">Nuestras Herramientas del Arte</h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-index="0" data-src="../images/DSC00731.webp" data-alt="Tostada con palta y huevo sobre mesa de madera" data-aos="fade-right" data-aos-delay="0">
+                <img src="../images/DSC00731.webp" alt="Tostada con palta y huevo sobre mesa de madera">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-index="1" data-src="../images/DSC00638.webp" data-alt="Vista desde la calle de la fachada y mesas de Cafetino" data-aos="fade-up" data-aos-delay="100">
+                <img src="../images/DSC00638.webp" alt="Vista desde la calle de la fachada y mesas de Cafetino">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-index="2" data-src="../images/DSC00591.webp" data-alt="Taza amarilla con latte art de corazón en plato" data-aos="fade-left" data-aos-delay="200">
+                <img src="../images/DSC00591.webp" alt="Taza amarilla con latte art de corazón en plato">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-index="3" data-src="../images/DSC00585.webp" data-alt="Detalle de variedad de croissants y pastelería en vitrina" data-aos="fade-right" data-aos-delay="0">
+                <img src="../images/DSC00585.webp" alt="Detalle de variedad de croissants y pastelería en vitrina">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-index="4" data-src="../images/DSC00729.webp" data-alt="Paquete de café en grano especial de Cafetino" data-aos="fade-up" data-aos-delay="100">
+                <img src="../images/DSC00729.webp" alt="Paquete de café en grano especial de Cafetino">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-index="5" data-src="../images/DSC00690.webp" data-alt="Máquina tostadora de café industrial" data-aos="fade-left" data-aos-delay="200">
+                <img src="../images/DSC00690.webp" alt="Máquina tostadora de café industrial">
+                <div class="overlay">
+                    <span class="view-text">VER</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="decorative-line right"></div>
+    </section>
+
+    <div id="lightbox" class="lightbox-hidden">
+        <span class="lightbox-close">×</span>
+        <img id="lightbox-image" src="../images/Cafetino 2018.jpg" alt="Imagen en grande">
+        <a id="prev-btn" class="lightbox-nav prev">❮</a> 
+        <a id="next-btn" class="lightbox-nav next">❯</a>
     </div>
 
-    <div class="footer-center">
-      <h2 class="footer-logo">cafetino</h2>
-      <div class="footer-socials">
-      <a target="_blank" href="https://www.instagram.com/cafetinogeneralpico/"><i class="fab fa-instagram"></i></a>
-      <a href="tel:+542302333688"><i class="fa-solid fa-phone"></i></a>
-      <a target="_blank" href="https://maps.app.goo.gl/2caM2dwBeRoNcpxd9"><i class="fa-solid fa-location-dot"></i></a>
-      </div>
-    </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Duración de la animación
+            once: true // Solo animar una vez al hacer scroll
+        });
+    </script>
+    
+    <script src="../java/galeria.js"></script>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Dirección</h4>
+                <p>Av. San Martín 688<br>General Pico, La Pampa</p>
+            </div>
 
-    <div class="footer-section">
-      <h4>Contacto</h4>
-      <p>T. 2302 333688<br></p>
-    </div>
-  </div>
+            <div class="footer-center">
+                <h2 class="footer-logo">cafetino</h2>
+                <div class="footer-socials">
+                <a target="_blank" href="https://www.instagram.com/cafetinogeneralpico/"><i class="fab fa-instagram"></i></a>
+                <a href="tel:+542302333688"><i class="fa-solid fa-phone"></i></a>
+                <a target="_blank" href="https://maps.app.goo.gl/2caM2dwBeRoNcpxd9"><i class="fa-solid fa-location-dot"></i></a>
+                </div>
+            </div>
 
-  <div class="footer-bottom">
-    <p>Copyright© 2018 All Rights Reserved - Cafetino Servimos café especial</p>
-  </div>
-</footer>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>T. 2302 333688<br></p>
+            </div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <div class="footer-bottom">
+            <p>Copyright© 2018 All Rights Reserved - Cafetino Servimos café especial</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
