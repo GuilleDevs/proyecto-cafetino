@@ -171,16 +171,47 @@ main {
   height: auto;
 }
 
-.hero-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+.special-coffee {
+    background-color: #39442D;
+    color:white;
+    padding: 90px 20px;
+    font-family: "aileron", sans-serif;
+    line-height: 1.8;
+  }
 
-.hero-text p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
+  .special-coffee .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .special-coffee .section-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .special-coffee .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .special-coffee p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .special-coffee strong {
+    color: white;
+    font-weight: bold;
+  }
 
 .btn {
   background: transparent;
@@ -224,7 +255,6 @@ main {
 
 /* Fresh Section */
 .fresh {
-  
   padding: 20px;
 }
 
@@ -236,7 +266,9 @@ main {
 
 .fresh p {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "aileron", sans-serif;
 }
 
 /* ===== FOOTER GENERAL ===== */
@@ -447,19 +479,15 @@ main {
     margin-top: 1rem;
     text-align: center;
   }
+  .fresh p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
 
   .hero-text {
     width: 100%;
     padding: 2rem 1rem;
     text-align: center;
-  }
-
-  .hero-text h2 {
-    font-size: 1.8rem;
-  }
-
-  .hero-text p {
-    font-size: 0.95rem;
   }
 
   .btn {
@@ -475,3 +503,12 @@ main {
     border-top: 1px solid #2a2a2a;
   }
 }
+@media (max-width: 768px) {
+    .special-coffee .section-title {
+      font-size: 1.9rem;
+    }
+
+    .special-coffee p {
+      font-size: 1rem;
+    }
+  }
