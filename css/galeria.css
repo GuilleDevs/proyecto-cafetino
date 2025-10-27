@@ -119,9 +119,45 @@ body {
     color: #4b2c20;
     text-align: center;
     margin-bottom: 40px;
-    position: relative;
-    width: 90%; /* Asegura que no se salga de los límites */
+    
+    /* 🔑 CLAVE: Contenedor para las líneas */
+    position: relative; 
+    
+    /* Centra el texto y limita su ancho al contenido */
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px; /* Espacio interno para que las líneas no lo toquen */
+    
+    /* Sobrescribir el overflow de aquí si estuviera forzando el ocultamiento */
+    overflow: visible; 
 }
+
+.gallery-title::before,
+.gallery-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Estilo de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: #BB8F60; /* Color marrón/beige de tu paleta */
+    width: 100px; /* Longitud de la línea */
+}
+
+/* Línea de la izquierda */
+.gallery-title::before {
+    right: 100%; /* Coloca el inicio de la línea a la izquierda del texto */
+    margin-right: 15px; /* Espacio entre la línea y el texto */
+}
+
+/* Línea de la derecha */
+.gallery-title::after {
+    left: 100%; /* Coloca el inicio de la línea a la derecha del texto */
+    margin-left: 15px; /* Espacio entre la línea y el texto */
+}
+
 
 /* Líneas finitas de la izquierda y derecha */
 .decorative-line {
@@ -133,11 +169,11 @@ body {
 }
 
 .decorative-line.left {
-    left: 20px; 
+    left: 10px; /* Ajustado al nuevo padding del gallery-section */
 }
 
 .decorative-line.right {
-    right: 20px; 
+    right: 10px; /* Ajustado al nuevo padding del gallery-section */
 }
 
 /* Estilo de la cuadrícula (Desktop) */
