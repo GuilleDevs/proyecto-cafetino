@@ -168,14 +168,10 @@ body {
   display: flex;
   justify-content: space-between;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding: 0.3rem 0;
   color: #39442D;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
-}
-.descripcion {
-  font-size: 0.9rem;
-  text-align: left;
 }
 
 /* ===== FOOTER GENERAL ===== */
