@@ -588,4 +588,32 @@ main {
     .special-coffee p {
       font-size: 1rem;
     }
+    /* 2. Definición de la animación */
+@keyframes slide {
+    /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
+    from {
+        transform: translateX(0);
+    }
+    
+    /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
+    to {
+        /* Moverse a la izquierda el ancho de los 7 elementos */
+        transform: translateX(-1550px); 
+    }
+}
+}
+@media (max-width: 425px) {
+    /* 2. Definición de la animación */
+@keyframes slide {
+    /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
+    from {
+        transform: translateX(0);
+    }
+    
+    /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
+    to {
+        /* Moverse a la izquierda el ancho de los 7 elementos */
+        transform: translateX(-1550px); 
+    }
   }
+}
