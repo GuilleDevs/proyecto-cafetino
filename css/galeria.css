@@ -372,6 +372,7 @@ body {
 @media (max-width: 900px) {
     /* Navbar */
     .navbar__container {
+        overflow-x: hidden;
         flex-wrap: wrap;
     }
 
@@ -399,6 +400,7 @@ body {
     .menu-toggle:checked + .menu-icon + .navbar__links {
         display: flex;
     }
+
     
     .hero {
         margin-top: 100px;
@@ -423,6 +425,7 @@ body {
 @media (max-width: 768px) {
     /* --- Galería --- */
     .gallery-grid {
+        overflow-x: hidden;
         grid-template-columns: repeat(2, 1fr); /* 2 columnas */
         gap: 10px;
     }
@@ -501,6 +504,7 @@ body {
 @media (max-width: 600px) {
     /* Media queries de Menú (anteriormente anidadas incorrectamente) */
     .menu-container {
+        overflow-x: hidden;
         width: 95%;
         padding: 1.5rem 1rem;
         border-width: 8px;
@@ -736,6 +740,8 @@ body {
     .hero-galeria .hero-phrase {
         font-size: 1.2rem;
     }
+
+    
 }
 
 @media (max-width: 480px) {
