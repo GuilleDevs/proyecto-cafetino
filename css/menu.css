@@ -167,10 +167,15 @@ body {
 .menu-column li {
   display: flex;
   justify-content: space-between;
-  font-size: 0.95rem;
+  text-align: left;
+  font-size: 1.5rem;
   padding: 0.3rem 0;
   color: #39442D;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+}
+.descripcion {
+  font-size: 0.9rem;
+  text-align: left;
 }
 
 /* ===== FOOTER GENERAL ===== */
@@ -362,6 +367,9 @@ body {
   .menu-column li {
     font-size: 0.9rem;
   }
+  .descripcion {
+    font-size: 0.6rem;
+  }
 }
 
 /* === Muy pequeñas (menos de 400px) === */
@@ -376,6 +384,9 @@ body {
 
   .menu-column li {
     font-size: 0.85rem;
+  }
+  .descripcion {
+    font-size: 0.5rem;
   }
 }
 }

@@ -126,7 +126,7 @@ body {
 .about-section {
     background-color: #f9f6f2;
     color: #3b2f2f;
-    padding: 80px 20px;
+    
     font-family: "aileron", sans-serif;
     font-weight: 300;
     line-height: 1.8;
@@ -139,7 +139,7 @@ body {
   .traceability-section {
     background-color: #F9F6F2;
     color: #3b2f2f;
-    padding: 80px 20px;
+    
     font-family: "aileron", sans-serif;
     font-weight: 300;
     line-height: 1.8;
@@ -226,7 +226,7 @@ body {
   .coffee-journey {
     background-color: #fbf8f3;
     color: #3b2f2f;
-    padding: 90px 20px;
+    
     font-family: "aileron", sans-serif;
     font-weight: 300;
     line-height: 1.8;
@@ -265,10 +265,10 @@ body {
     font-weight: bold;
   }
 
-   .coffee-roast {
+  .coffee-roast {
     background-color: #f9f5f1;
     color: #3b2f2f;
-    padding: 90px 20px;
+  
     font-family: "aileron", sans-serif;
     font-weight: 300;
     line-height: 1.8;
@@ -307,7 +307,49 @@ body {
     font-weight: 600;
   }
 
-  .highlight {
+  .traceability {
+    background-color: #F9F6F2;
+    color: #3a2b2b;
+    
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .traceability .container {
+    max-width: 900px;
+    margin: 0 auto;
+    
+  }
+
+  .traceability .section-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4b2c20;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .traceability .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .traceability p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .traceability strong {
+    color: #4b2c20;
+    font-weight: 600;
+  }
+
+  .traceability .highlight {
     background-color: #fff8ef;
     border-left: 5px solid #c5a26e;
     font-size: 1.3rem;
@@ -319,6 +361,59 @@ body {
     font-style: italic;
   }
 
+  .section {
+    font-weight: 300;
+    background-color: #F9F6F2;
+    color: #3c3c3b;
+    line-height: 1.8;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #3b2a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+  }
+
+  strong {
+    color: #4b2c20;
+    font-weight: 600;
+  }
+
+  .highlight-box {
+    background-color: #fff8ef;
+    border-left: 5px solid #c5a26e;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4b2c20;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .highlight {
+    background-color: #fff8ef;
+    border-left: 5px solid #c5a26e;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4b2c20;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+  }
 .bloque--invertido {
     flex-direction: row-reverse;
 }
@@ -626,3 +721,44 @@ button:hover {
       font-size: 1rem;
     }
   }
+  @media (max-width: 768px) {
+    .traceability .section-title {
+      font-size: 1.9rem;
+    }
+
+    .traceability p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+  .section-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-texto p {
+    font-size: 1rem;
+  }
+}
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+  }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+  .video-container {
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
+  }
+}

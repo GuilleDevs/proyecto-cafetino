@@ -174,7 +174,7 @@ main {
 .special-coffee {
     background-color: #39442D;
     color:white;
-    padding: 90px 20px;
+    
     font-family: "aileron", sans-serif;
     line-height: 1.8;
   }
@@ -342,6 +342,83 @@ main {
 .footer-socials a:hover {
   color: #bfa14a;
 }
+.carrousel-copy {
+  display: flex;
+  flex-direction: column;
+}
+/* ===== CARROUSEL DE MARCAS ===== */
+.carousel-container {
+    width: 100%; /* Ancho visible de una sola imagen */
+    height: 60px;
+    margin: 30px auto;
+    overflow: hidden; /* Oculta el contenido fuera del área visible */
+    
+}
+
+/* El contenedor interno (carousel-inner) contiene ambos sets (original y clonado) */
+.carousel-inner {
+    display: flex;
+    /* 14 ITEMS * 600px = 8400px (ancho total) */
+    width: 8400px; 
+    
+    animation: slide 35s linear infinite; /* 5 segundos por imagen * 7 imágenes = 35s */
+}
+
+/* Contiene un set completo de 7 imágenes */
+.carousel-set {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding: 10px;
+    background: #F3F3F3;
+
+}
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Estilos de cada imagen */
+.carousel-item {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F3F3;
+    border-radius: 8px;
+}
+.carousel-item-subir img {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F3F3;
+    border-radius: 8px;
+}
+.carousel-item-subir img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+}
+
+
+/* 2. Definición de la animación */
+@keyframes slide {
+    /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
+    from {
+        transform: translateX(0);
+    }
+    
+    /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
+    to {
+        /* Moverse a la izquierda el ancho de los 7 elementos */
+        transform: translateX(-550px); 
+    }
+}
+
 
 /* ===== LÍNEA INFERIOR ===== */
 .footer-bottom {
