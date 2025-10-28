@@ -505,6 +505,101 @@ button:hover {
     animation-range: entry 25% cover 30%;
 }
 
+.section-filtrados {
+  background-color: #fdfaf6;
+  color: #2a1c14;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+}
+
+.container-filtrados {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titulo-filtrados {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #3b1f0e;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.decoracion {
+  width: 60px;
+  height: 3px;
+  background-color: #c7a26a;
+  margin: 0 auto 50px auto;
+  border-radius: 2px;
+}
+
+/* ----- ESTRUCTURA DE CADA MÉTODO ----- */
+.metodo {
+  margin-bottom: 70px;
+}
+
+.metodo-contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.metodo-imagen {
+  width: 40%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.metodo-texto {
+  width: 60%;
+}
+
+.metodo-texto h3 {
+  color: #2e1609;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.metodo-texto p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  color: #3a2c20;
+}
+
+/* ----- BLOQUE DE RECETA ----- */
+.receta {
+  background-color: #fff5e9;
+  border-left: 4px solid #c7a26a;
+  padding: 15px 25px;
+  border-radius: 6px;
+}
+
+.receta h4 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #2e1609;
+}
+.receta-info {
+  font-size: 0.95rem;
+  color: #7a5c3d;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.receta-pasos {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.receta-pasos li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #3a2c20;
+  line-height: 1.6;
+}
 /* ===== FOOTER GENERAL ===== */
 .footer {
     background-color: #39442d;
