@@ -857,3 +857,89 @@ button:hover {
     height: auto;
   }
 }
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+  .metodo-contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .metodo-imagen,
+  .metodo-texto {
+    width: 100%;
+  }
+
+  .metodo-imagen {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .metodo-texto h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .metodo-texto p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .receta {
+    padding: 15px 20px;
+  }
+
+  .receta h4 {
+    font-size: 1rem;
+  }
+
+  .receta-info {
+    font-size: 0.9rem;
+  }
+
+  .receta-pasos li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+  .section-filtrados {
+    padding: 50px 15px;
+  }
+
+  .titulo-filtrados {
+    font-size: 2rem;
+  }
+
+  .decoracion {
+    width: 40px;
+    height: 2px;
+    margin-bottom: 30px;
+  }
+
+  .metodo {
+    margin-bottom: 50px;
+  }
+
+  .metodo-texto h3 {
+    font-size: 1.3rem;
+  }
+
+  .metodo-texto p {
+    font-size: 0.95rem;
+  }
+
+  .receta {
+    padding: 12px 15px;
+  }
+
+  .receta-info {
+    font-size: 0.85rem;
+  }
+
+  .receta-pasos li {
+    font-size: 0.9rem;
+  }
+}
