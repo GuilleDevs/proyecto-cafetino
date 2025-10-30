@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     audio.currentTime = parseFloat(tiempoGuardado);
   }
 
-  audio.volume = 0.6; // volumen moderado
+  audio.volume = 0.05; // volumen moderado
   audio.play();
 
   // Guarda el tiempo de reproducción cada medio segundo
