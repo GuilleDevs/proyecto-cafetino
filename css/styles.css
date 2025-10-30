@@ -90,6 +90,21 @@ body {
   cursor: pointer;
 }
 
+.audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.audio-toggle:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
 
 /* Hero Section */
 main {

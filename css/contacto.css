@@ -203,22 +203,61 @@ main {
     margin-bottom: 20px;
   }
   .mapa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .section-mapa {
-    width: 100%;
-    margin-bottom: 30px;
-    max-width: 1200px; /* límite máximo para pantallas grandes */
-  }
-  .section-mapa iframe {
-    width: 100%;
-    height: 600px; /* aumentamos el alto */
-    border: none;
-    border-radius: 10px; /* opcional, para esquinas suaves */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* opcional, da un efecto flotante */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.section-mapa {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mapa-imagen {
+  position: relative;
+}
+
+.mapa-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mapa-imagen:hover img {
+  transform: scale(1.03);
+}
+
+.mapa-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(240, 235, 230, 0.85);
+  text-align: center;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.mapa-overlay h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #3e2f1c;
+  font-weight: 600;
+}
+
+.mapa-overlay p {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  color: #5c4a33;
+}
+
 /* ===== FOOTER GENERAL ===== */
 .footer {
   background-color: #39442d;
@@ -267,7 +306,7 @@ main {
 }
 
 .footer-logo {
-  font-size: 22px;
+  font-size: 2rem;
   letter-spacing: 3px;
   margin-bottom: 5px;
 }
@@ -367,15 +406,7 @@ main {
     height: auto;
     padding: 30px 15px;
   }
-  .section-mapa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .section-mapa iframe {
-    width: 90%;
-    height: 450px; /* aumentamos el alto */
-  }
+  
 }
 
 /* --- TABLETS (hasta 1024px) --- */
@@ -435,15 +466,7 @@ main {
   .section-encuentranos__p-vi {
     font-weight: bold;
   }
-  .section-mapa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .section-mapa iframe {
-    width: 90%;
-    height: 450px; /* aumentamos el alto */
-  }
+  
 }
 
 /* --- CELULARES GRANDES (hasta 768px) --- */
@@ -504,15 +527,7 @@ main {
   .section-encuentranos__p-vi {
     font-weight: bold;
   }
-  .section-mapa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .section-mapa iframe {
-    width: 90%;
-    height: 400px; /* aumentamos el alto */
-  }
+  
 }
 
 /* --- CELULARES PEQUEÑOS (hasta 480px) --- */
@@ -565,7 +580,20 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
+  } 
 }
+@media (max-width: 768px) {
+  .section-mapa {
+    max-width: 95%;
+  }
+
+  .mapa-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .mapa-overlay p {
+    font-size: 0.85rem;
+  }
+}
+
 
