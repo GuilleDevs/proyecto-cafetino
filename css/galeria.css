@@ -726,7 +726,7 @@ body {
     /* Ajusta la altura a tu gusto */
     height: 350px; 
     /* Usa la imagen que desees de fondo. Ajusta la ruta si es necesario. */
-    background-image: url('../images/imagen portada.png'); 
+    background-color: #E6E1D3; 
     background-size: cover;
     background-position: center 50%; /* Puedes ajustar la posición vertical */
     display: flex;
@@ -737,7 +737,7 @@ body {
     /* Para que quede debajo del navbar fixed */
     margin-top: 80px; 
     /* Efecto de oscurecimiento sobre la imagen */
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+    
 }
 
 .hero-galeria-content {
@@ -752,7 +752,6 @@ body {
     font-size: 4rem; 
     margin-bottom: 0.5rem;
     letter-spacing: 5px;
-    text-transform: uppercase;
     text-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, 0.5);
 }
 
@@ -760,7 +759,9 @@ body {
     font-family: "aileron", sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    color: #39442D;
+;
+    
 }
 
 /* =====================================
