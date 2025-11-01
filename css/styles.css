@@ -1,0 +1,634 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "aileron", sans-serif;
+  font-weight: 200;
+  background-color: #f3f3f3;
+  color: #39442d;
+}
+
+/* ===== NAVBAR GENERAL ===== */
+.navbar {
+  background-color: #E5DFD1; /* beige */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+}
+
+/* ===== LOGO ===== */
+.navbar__logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* ===== LINKS ===== */
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  color: #063a34; /* verde oscuro */
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+  color: #a76b32; /* marrón */
+}
+.navbar-efecto {
+    color: #39442D;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+  }
+.navbar-efecto::after, .header__navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #BB8F60;
+    transform: scaleX(0);
+    transform-origin:bottom right;
+    transition: transform 0.4s ease-out;
+  }
+.navbar-efecto:hover::after, .header__navbar:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #063a34;
+  cursor: pointer;
+}
+
+.audio-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.audio-toggle:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+
+/* Hero Section */
+main {
+  min-height: 100vh;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 150px;
+}
+
+.hero-contenedor {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  padding: 2rem;
+}
+
+.hero-image {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 1rem;
+    width: 90%;
+    z-index: 2;
+  }
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Marco decorativo en esquinas --- */
+.hero-image::before,
+.hero-image::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 6px solid #8b9a83;
+  z-index: 1;
+}
+
+/* Esquina superior izquierda */
+.hero-image::before {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Esquina inferior derecha */
+.hero-image::after {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+  padding: 3rem;
+  background: #39442d;
+  font-family: "aileron", sans-serif;
+  font-weight: 300;
+  height: auto;
+}
+
+.special-coffee {
+    background-color: #39442D;
+    color:white;
+    
+    font-family: "aileron", sans-serif;
+    line-height: 1.8;
+  }
+
+  .special-coffee .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .special-coffee .section-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .special-coffee .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .special-coffee p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .special-coffee strong {
+    color: white;
+    font-weight: bold;
+  }
+
+.btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+/* Estilos del enlace dentro del botón */
+.btn a {
+  color: inherit;              /* Usa el color del botón (blanco) */
+  text-decoration: none;       /* Quita el subrayado */
+  display: inline-block;       /* Evita problemas de clic en el botón */
+  width: 100%;
+  height: 100%;
+}
+/* Al pasar el mouse */
+.btn:hover {
+  background: #fff;
+  color: #285746;
+}
+
+/* Asegura que el enlace dentro del hover cambie igual */
+.btn:hover a {
+  color: #285746;
+}
+
+/* Evita que cambie al ser visitado o clickeado */
+.btn a:visited,
+.btn a:active {
+  color: inherit;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #fff;
+  color: #285746;
+}
+
+/* Fresh Section */
+.fresh {
+  padding: 20px;
+}
+
+.fresh h3 {
+  color: #39442d;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.fresh p {
+  color: black;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "aileron", sans-serif;
+}
+
+/* ===== FOOTER GENERAL ===== */
+.footer {
+  background-color: #39442d;
+  color: #fff;
+  font-family: "aileron", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 40px;
+  
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== SECCIONES ===== */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  text-align:center;
+}
+
+.footer-section h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 13px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* ===== CENTRO ===== */
+.footer-center {
+  text-align: center;
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+/* ===== REDES SOCIALES ===== */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #bfa14a;
+}
+.carrousel-copy {
+  display: flex;
+  flex-direction: column;
+}
+/* ===== CARROUSEL DE MARCAS ===== */
+.carousel-container {
+    width: 100%; /* Ancho visible de una sola imagen */
+    height: 60px;
+    margin: 30px auto;
+    overflow: hidden; /* Oculta el contenido fuera del área visible */
+    
+}
+
+/* El contenedor interno (carousel-inner) contiene ambos sets (original y clonado) */
+.carousel-inner {
+    display: flex;
+    /* 14 ITEMS * 600px = 8400px (ancho total) */
+    width: 8400px; 
+    
+    animation: slide 35s linear infinite; /* 5 segundos por imagen * 7 imágenes = 35s */
+}
+
+/* Contiene un set completo de 7 imágenes */
+.carousel-set {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding: 10px;
+    background: #F3F3F3;
+
+}
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Estilos de cada imagen */
+.carousel-item {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F3F3;
+    border-radius: 8px;
+}
+.carousel-item-subir img {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F3F3F3;
+    border-radius: 8px;
+}
+.carousel-item-subir img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+}
+
+
+/* 2. Definición de la animación */
+@keyframes slide {
+    /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
+    from {
+        transform: translateX(0);
+    }
+    
+    /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
+    to {
+        /* Moverse a la izquierda el ancho de los 7 elementos */
+        transform: translateX(-550px); 
+    }
+}
+
+
+/* ===== LÍNEA INFERIOR ===== */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 15px 10px;
+  background-color: #39442d;
+}
+
+.footer-bottom p {
+  color: #cfcfcf;
+  font-size: 12px;
+}
+/* =========================
+  MEDIA QUERIES RESPONSIVE NAVBAR
+========================= */
+
+/* --- TABLET Y CELULAR --- */
+@media (max-width: 900px) {
+  .navbar__container {
+    flex-wrap: wrap;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar__links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9e3d4;
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar__links a {
+    padding: 0.8rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Mostrar menú al activar el checkbox */
+  .menu-toggle:checked + .menu-icon + .navbar__links {
+    display: flex;
+  }
+  .hero {
+    margin-top: 100px;
+  }
+}
+
+/* ---- Tablets (hasta 1024px) ---- */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .hero-contenedor {
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 90%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .fresh {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  .footer-content {
+    border-top: 1px solid #2a2a2a;
+  }
+}
+
+/* ---- Celulares (hasta 768px) ---- */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .hero-contenedor {
+    padding: 1rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .fresh {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .fresh p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+  .footer-content {
+    border-top: 1px solid #2a2a2a;
+  }
+}
+@media (max-width: 768px) {
+    .special-coffee .section-title {
+      font-size: 1.9rem;
+    }
+
+    .special-coffee p {
+      font-size: 1rem;
+    }
+    /* 2. Definición de la animación */
+@keyframes slide {
+    /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
+    from {
+        transform: translateX(0);
+    }
+    
+    /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
+    to {
+        /* Moverse a la izquierda el ancho de los 7 elementos */
+        transform: translateX(-1550px); 
+    }
+}
+}
+@media (max-width: 425px) {
+    /* 2. Definición de la animación */
+@keyframes slide {
+    /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
+    from {
+        transform: translateX(0);
+    }
+    
+    /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
+    to {
+        /* Moverse a la izquierda el ancho de los 7 elementos */
+        transform: translateX(-1550px); 
+    }
+  }
+}

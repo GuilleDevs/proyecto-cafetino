@@ -1,0 +1,945 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* FIX REFORZADO: Asegura que ni el HTML ni el BODY permitan el desbordamiento horizontal */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "aileron", sans-serif;
+    font-weight: 200;
+    background-color: #F9F6F2;
+    color: #39442d;
+}
+
+/* ===== NAVBAR GENERAL ===== */
+.navbar {
+    background-color: #E5DFD1;
+    /* beige */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+}
+
+/* ===== LOGO ===== */
+.navbar__logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* ===== LINKS ===== */
+.navbar__links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar__links a {
+    color: #063a34;
+    /* verde oscuro */
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+    color: #a76b32;
+    /* marrón */
+}
+
+.navbar-efecto {
+    color: #39442D;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-efecto::after,
+.header__navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #BB8F60;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+.navbar-efecto:hover::after,
+.header__navbar:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: #063a34;
+    cursor: pointer;
+}
+
+/* Estructura general */
+.sobre-nosotros {
+    /* El padding-top se ajusta al alto de la navbar */
+    padding-top: 120px; 
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px; /* Ya tenía padding: 60px 0, lo separamos */
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Bloques */
+.bloque {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.about-section {
+    background-color: #f9f6f2;
+    color: #3b2f2f;
+    
+    font-family: "aileron", sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .about-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .traceability-section {
+    background-color: #F9F6F2;
+    color: #3b2f2f;
+    
+    font-family: "aileron", sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .traceability-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #4b2c20;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .traceability-section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+
+  .traceability-section strong {
+    color: #4b2c20;
+  }
+
+  .highlight {
+    background-color: #fff8ef;
+    border-left: 5px solid #c5a26e;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4b2c20;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4b2c20;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .about-section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+
+  .about-section strong {
+    color: #4b2c20;
+  }
+
+  .about-section em {
+    font-style: italic;
+    color: #705043;
+  }
+
+  .coffee-journey {
+    background-color: #fbf8f3;
+    color: #3b2f2f;
+    
+    font-family: "aileron", sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .coffee-journey .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .coffee-journey .section-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4b2c20;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .coffee-journey .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .coffee-journey p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .coffee-journey strong {
+    color: #4b2c20;
+    font-weight: bold;
+  }
+
+  .coffee-roast {
+    background-color: #f9f5f1;
+    color: #3b2f2f;
+  
+    font-family: "aileron", sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .coffee-roast .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .coffee-roast .section-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4b2c20;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .coffee-roast .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .coffee-roast p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .coffee-roast strong {
+    color: #4b2c20;
+    font-weight: 600;
+  }
+
+  .traceability {
+    background-color: #F9F6F2;
+    color: #3a2b2b;
+    
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .traceability .container {
+    max-width: 900px;
+    margin: 0 auto;
+    
+  }
+
+  .traceability .section-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4b2c20;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .traceability .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c5a26e;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  .traceability p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .traceability strong {
+    color: #4b2c20;
+    font-weight: 600;
+  }
+
+  .traceability .highlight {
+    background-color: #fff8ef;
+    border-left: 5px solid #c5a26e;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4b2c20;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .section {
+    font-weight: 300;
+    background-color: #F9F6F2;
+    color: #3c3c3b;
+    line-height: 1.8;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #3b2a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+  }
+
+  strong {
+    color: #4b2c20;
+    font-weight: 600;
+  }
+
+  .highlight-box {
+    background-color: #fff8ef;
+    border-left: 5px solid #c5a26e;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4b2c20;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .highlight {
+    background-color: #fff8ef;
+    border-left: 5px solid #c5a26e;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4b2c20;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+  }
+.bloque--invertido {
+    flex-direction: row-reverse;
+}
+
+/* Imágenes */
+.bloque img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Contenido */
+.bloque__contenido {
+    width: 50%;
+    font-weight: bold;
+}
+
+.bloque__contenido h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.bloque__contenido p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+
+/* Botón */
+button {
+    background: transparent;
+    border: 1px solid #000;
+    padding: 10px 25px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* === ANIMACIONES DE ENTRADA === */
+@keyframes slideInLeft {
+    from {
+        /* Se usa un valor menor para reducir el riesgo de desbordamiento */
+        transform: translateX(-50px); 
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        /* Se usa un valor menor para reducir el riesgo de desbordamiento */
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* === SCROLL-TIMELINE === */
+@scroll-timeline scrollAnim {
+    source: auto;
+    orientation: block;
+}
+
+.bloque:nth-child(odd) {
+    animation: slideInLeft 1s ease-out both;
+    animation-timeline: scrollAnim;
+    animation-range: entry 25% cover 30%;
+}
+
+.bloque:nth-child(even) {
+    animation: slideInRight 1s ease-out both;
+    animation-timeline: scrollAnim;
+    animation-range: entry 25% cover 30%;
+}
+
+.section-filtrados {
+  background-color: #fdfaf6;
+  color: #2a1c14;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+}
+
+.container-filtrados {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titulo-filtrados {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #3b1f0e;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.decoracion {
+  width: 60px;
+  height: 3px;
+  background-color: #c7a26a;
+  margin: 0 auto 50px auto;
+  border-radius: 2px;
+}
+
+/* ----- ESTRUCTURA DE CADA MÉTODO ----- */
+.metodo {
+  margin-bottom: 70px;
+}
+
+.metodo-contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.metodo-imagen {
+  width: 40%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.metodo-texto {
+  width: 60%;
+}
+
+.metodo-texto h3 {
+  color: #2e1609;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.metodo-texto p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  color: #3a2c20;
+}
+
+/* ----- BLOQUE DE RECETA ----- */
+.receta {
+  background-color: #fff5e9;
+  border-left: 4px solid #c7a26a;
+  padding: 15px 25px;
+  border-radius: 6px;
+}
+
+.receta h4 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #2e1609;
+}
+.receta-info {
+  font-size: 0.95rem;
+  color: #7a5c3d;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.receta-pasos {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.receta-pasos li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #3a2c20;
+  line-height: 1.6;
+}
+/* ===== FOOTER GENERAL ===== */
+.footer {
+    background-color: #39442d;
+    color: #fff;
+    font-family: "aileron", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== SECCIONES ===== */
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+}
+
+.footer-section h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section p {
+    font-size: 13px;
+    color: #cfcfcf;
+    line-height: 1.6;
+}
+
+/* ===== CENTRO ===== */
+.footer-center {
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+/* ===== REDES SOCIALES ===== */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #bfa14a;
+}
+
+/* ===== LÍNEA INFERIOR ===== */
+.footer-bottom {                          
+    border-top: 1px solid #2a2a2a;
+    padding: 15px 10px;
+    background-color: #39442d;
+}
+
+.footer-bottom p {
+    color: #cfcfcf;
+    font-size: 12px;
+}
+
+/* =========================
+  MEDIA QUERIES RESPONSIVE NAVBAR
+========================= */
+
+/* --- TABLET Y CELULAR --- */
+@media (max-width: 900px) {
+    .navbar__container {
+        flex-wrap: wrap;
+        /* FIX: Asegura un padding razonable en el contenedor de la navbar */
+        padding: 0.8rem 1rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar__links {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e9e3d4;
+        padding: 1rem 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .navbar__links a {
+        padding: 0.8rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Mostrar menú al activar el checkbox */
+    .menu-toggle:checked+.menu-icon+.navbar__links {
+        display: flex;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .bloque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloque--invertido {
+        flex-direction: column;
+    }
+
+    .bloque img,
+    .bloque__contenido {
+        width: 100%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .sobre-nosotros {
+        width: 95%;
+        gap: 50px;
+    }
+
+    .bloque__contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .bloque__contenido p {
+        font-size: 0.95rem;
+    }
+
+    button {
+        padding: 8px 20px;
+    }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .bloque {
+        /* Se mantiene con !important por si hay conflicto de especificidad */
+        flex-direction: column !important; 
+        text-align: center;
+    }
+
+    .bloque-img img {
+        max-width: 100%;
+    }
+
+    .bloque-texto {
+        padding: 0 10px;
+    }
+
+    .bloque-texto h2 {
+        font-size: 1.5rem;
+    }
+}
+ @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+    .about-section p {
+      font-size: 1rem;
+    }
+    .highlight {
+      font-size: 1.1rem;
+    }
+    .section-title {
+      font-size: 2rem;
+    }
+    .traceability-section p {
+      font-size: 1rem;
+    }
+    .highlight {
+      font-size: 1.05rem;
+    }
+}
+@media (max-width: 768px) {
+    .coffee-journey .section-title {
+      font-size: 1.9rem;
+    }
+
+    .coffee-journey p {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .coffee-roast .section-title {
+      font-size: 1.9rem;
+    }
+
+    .coffee-roast p {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .traceability .section-title {
+      font-size: 1.9rem;
+    }
+
+    .traceability p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+  .section-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-texto p {
+    font-size: 1rem;
+  }
+}
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+  }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+  .video-container {
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
+  }
+}
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 992px) {
+  .metodo-contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .metodo-imagen,
+  .metodo-texto {
+    width: 100%;
+  }
+
+  .metodo-imagen {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .metodo-texto h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .metodo-texto p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .receta {
+    padding: 15px 20px;
+  }
+
+  .receta h4 {
+    font-size: 1rem;
+  }
+
+  .receta-info {
+    font-size: 0.9rem;
+  }
+
+  .receta-pasos li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+  .section-filtrados {
+    padding: 50px 15px;
+  }
+
+  .titulo-filtrados {
+    font-size: 2rem;
+  }
+
+  .decoracion {
+    width: 40px;
+    height: 2px;
+    margin-bottom: 30px;
+  }
+
+  .metodo {
+    margin-bottom: 50px;
+  }
+
+  .metodo-texto h3 {
+    font-size: 1.3rem;
+  }
+
+  .metodo-texto p {
+    font-size: 0.95rem;
+  }
+
+  .receta {
+    padding: 12px 15px;
+  }
+
+  .receta-info {
+    font-size: 0.85rem;
+  }
+
+  .receta-pasos li {
+    font-size: 0.9rem;
+  }
+}
