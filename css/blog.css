@@ -460,7 +460,7 @@ body {
 /* 📱 Responsividad */
 @media (max-width: 768px) {
   .blog-ruta-cafe {
-    padding: 25px 15px;
+    padding: 110px 15px;
   }
 
   .blog-ruta-cafe h2 {
@@ -512,9 +512,11 @@ body {
 
 @media (max-width: 480px) {
   .blog-ruta-cafe {
-    padding: 20px 12px;
+    padding: 100px 12px;
   }
-
+  .blog-ruta-cafe h2 {
+    font-size: 1.4rem;
+  }
   .blog-ruta-cafe p {
     font-size: 0.95rem;
   }
