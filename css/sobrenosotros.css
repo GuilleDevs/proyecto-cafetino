@@ -509,7 +509,8 @@ button:hover {
   background-color: #fdfaf6;
   color: #2a1c14;
   padding: 80px 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "aileron", sans-serif;
+  font-weight: 300;
   line-height: 1.8;
 }
 
