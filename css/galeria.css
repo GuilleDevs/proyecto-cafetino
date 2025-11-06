@@ -800,8 +800,63 @@ body {
     font-weight: 400;
     font-size: 1.5rem;
     color: #39442D;
-;
-    
+}
+
+.takeaway-section {
+  background-color: #F3F3F3;
+  padding: 4rem 2rem;
+  border-top: 1px solid #e0dcd6;
+  border-bottom: 1px solid #e0dcd6;
+}
+
+.takeaway-contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.takeaway-texto {
+  flex: 1;
+  min-width: 320px;
+}
+
+.takeaway-texto h2 {
+    font-family: "aileron", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 550;
+    color: #4b2c20;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.takeaway-texto p {
+  font-family: "aileron", sans-serif;
+  font-weight: 300;
+  color: #5a4e42;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.takeaway-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.takeaway-imagen img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.takeaway-imagen img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* =====================================
@@ -828,7 +883,21 @@ body {
         font-size: 1.2rem;
     }
 }
+/* Responsividad */
+@media (max-width: 768px) {
+  .takeaway-contenedor {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 
+  .takeaway-texto h2 {
+    text-align: center;
+  }
+
+  .takeaway-imagen img {
+    max-width: 320px;
+  }
+}
 @media (max-width: 480px) {
     .hero-galeria {
         overflow: hidden;
@@ -844,8 +913,72 @@ body {
         display: block;
         margin: 0 auto;
     }
-
     .hero-galeria .hero-phrase {
         font-size: 1rem;
     }
+}
+/* 📱 Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+  .takeaway-contenedor {
+    gap: 2rem;
+  }
+
+  .takeaway-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .takeaway-texto p {
+    font-size: 1rem;
+  }
+
+  .takeaway-imagen img {
+    max-width: 380px;
+  }
+}
+
+/* 📲 Celulares (hasta 768px) */
+@media (max-width: 768px) {
+  .takeaway-contenedor {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .takeaway-texto {
+    padding: 0 1rem;
+  }
+
+  .takeaway-texto h2 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .takeaway-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .takeaway-imagen img {
+    max-width: 320px;
+    width: 90%;
+  }
+}
+
+/* 📱 Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .takeaway-section {
+    padding: 3rem 1rem;
+  }
+
+  .takeaway-texto h2 {
+    font-size: 1.4rem;
+  }
+
+  .takeaway-texto p {
+    font-size: 0.95rem;
+  }
+
+  .takeaway-imagen img {
+    max-width: 280px;
+  }
 }
