@@ -121,19 +121,22 @@ body {
   color: #39442D;
 }
 
-.menu-header h2 {
+.menu-header h2,
+.menu-subtitulo h2 {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 3px;
   color: #39442D;
   margin-top: 0.2rem;
 }
-
+.menu-subtitulo h2 {
+margin-bottom: 30px;
+}
 /* --- DIVISOR --- */
 .divider {
   border: none;
   border-top: 1px solid #39442D;
-  margin: 1.5rem auto 2rem;
+  margin: 1.5rem auto 1.5rem;
   width: 60%;
 }
 

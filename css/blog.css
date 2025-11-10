@@ -293,7 +293,7 @@ body {
   flex: 1;
   min-width: 280px;
   color: #3a2f25;
-  font-family: 'Poppins', sans-serif;
+  font-family: "aileron", sans-serif;
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -322,7 +322,7 @@ body {
 }
 
 .bloque-video .titulo-video {
-  font-family: 'Poppins', sans-serif;
+  font-family: "aileron", sans-serif;
   font-size: 1.6rem;
   color: #3a2f25;
   margin-bottom: 1.5rem;
@@ -351,7 +351,7 @@ body {
   max-width: 800px;
   margin: 1.5rem auto 0 auto;
   color: #3a2f25;
-  font-family: 'Poppins', sans-serif;
+  font-family: "aileron", sans-serif;
   font-size: 1rem;
   line-height: 1.8;
 }

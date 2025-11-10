@@ -821,7 +821,7 @@ body {
 
 .takeaway-texto {
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .takeaway-texto h2 {
@@ -848,7 +848,7 @@ body {
 
 .takeaway-imagen img {
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -895,7 +895,7 @@ body {
   }
 
   .takeaway-imagen img {
-    max-width: 320px;
+    max-width: 420px;
   }
 }
 @media (max-width: 480px) {
@@ -959,8 +959,8 @@ body {
   }
 
   .takeaway-imagen img {
-    max-width: 320px;
-    width: 90%;
+    max-width: 420px;
+    width: 100%;
   }
 }
 
@@ -977,8 +977,11 @@ body {
   .takeaway-texto p {
     font-size: 0.95rem;
   }
-
+  .takeaway-contenedor {
+    align-items: center;
+    width: 100%;
+  }
   .takeaway-imagen img {
-    max-width: 280px;
+    max-width: 350px;
   }
 }

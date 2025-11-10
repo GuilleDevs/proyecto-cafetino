@@ -92,7 +92,7 @@ body {
 
 main {
     padding-top: 80px;
-    background-image: url('../images/background\ contacto.jpg'); /* Ajustá la ruta según tu estructura */
+    background-color: #F9F6F2;
     background-size: cover;     /* Hace que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita repeticiones */
@@ -101,14 +101,13 @@ main {
   .main__vista-principal {
     width: 100%;
     height: 10rem;
-    background-size: cover;
-    background-position: center;
+    
   }
   .main__vista-principal--titulo {
     color: white;
     padding: 200px 0 0 10px;
     font-family: "aileron", sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .main___vista-principal--titulo-span {
     font-family: "aileron", sans-serif;
@@ -119,36 +118,38 @@ main {
   /*>>>> FIN HEADER <<<<*/
 
 .main__vista-principal--contacto {
-  height: auto;
-    background-size: cover;
+    height: auto;
+    
   }
   
   .main__vista-principal--titulo-contacto {
     text-align: center;
     font-family: "aileron", sans-serif;
-    font-size: 4rem;
-    padding-top: 200px;
+    font-size: 2.5rem;
+    padding-top: 100px;
   }
   
   .main__vista-principal--titulo-contacto-span {
     font-family: "aileron", sans-serif;
     color: #515546;
-    font-size: 3.8cm;
+    font-size: 7rem;
     font-weight: 500;
     line-height: 20px;
   }
   .section-contacto {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-evenly;
     width: 100%;
     padding-bottom: 30px;
+    padding-top: 30px;
   }
   
   .section-contacto__article--conteiner-contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     border: 2px solid inherit;
     width: 400px;
     height: 300px;
@@ -162,7 +163,7 @@ main {
   
   .section-contacto__article--icon {
     color: #515546;
-    font-size: 5.5rem;
+    font-size: 5rem;
     text-align: center;
   }
   
@@ -177,7 +178,7 @@ main {
     font-weight: bold;
   }
   .section-encuentranos__titulo {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 50px;
     text-align: center;
     font-family: "aileron", sans-serif;
@@ -186,7 +187,7 @@ main {
   .section-encuentranos__titulo-span {
     font-family: "aileron", sans-serif;
     color: #515546;
-    font-size: 3.2cm;
+    font-size: 5rem;
     font-weight: 500;
     line-height: 20px;
     padding-top: 15px;
@@ -242,7 +243,7 @@ main {
   background: rgba(240, 235, 230, 0.85);
   text-align: center;
   padding: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "aileron", sans-serif;
 }
 
 .mapa-overlay h3 {
@@ -382,22 +383,23 @@ main {
 /* --- Escritorio (hasta 1440px) --- */
 @media (max-width: 1440px) {
   .main__vista-principal--contacto {
-    height: 400px;
+    height: 300px;
     background-position: center;
   }
 
   .main__vista-principal--titulo-contacto {
     font-size: 3rem;
-    padding-top: 160px;
   }
 
   .main__vista-principal--titulo-contacto-span {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
-
+  .section-encuentranos__titulo-span {
+    font-size: 3rem;
+  }
   .section-contacto {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 25px;
   }
 
@@ -411,43 +413,37 @@ main {
 
 /* --- TABLETS (hasta 1024px) --- */
 @media (max-width: 1024px) {
-  .main__vista-principal--contacto {
-    height: 300px;
-    background-position: center;
-  }
 
   .main__vista-principal--titulo-contacto {
-    font-size: 3rem;
-    padding-top: 160px;
+    font-size: 2.5rem;
   }
 
   .main__vista-principal--titulo-contacto-span {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .section-contacto {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 25px;
   }
-
+  
   .section-contacto__article--conteiner-contacto {
     width: 260px;
     height: auto;
     padding: 30px 15px;
   }
   .section-contacto__article--parrafo {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .section-contacto__article--numero-parrafo,
-  .section-contacto__article--correo-parrafo,
   .section-contacto__article--calle-parrafo {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
 
   .section-contacto__article--icon {
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
   .section-encuentranos__titulo {
     font-size: 2.5rem;
@@ -456,7 +452,7 @@ main {
   }
 
   .section-encuentranos__titulo-span {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .section-encuentranos__p-horarios {
     font-weight: bold;
@@ -472,17 +468,17 @@ main {
 /* --- CELULARES GRANDES (hasta 768px) --- */
 @media (max-width: 768px) {
   .main__vista-principal--contacto {
-    height: 300px;
+    height: 250px;
     background-position: center;
   }
 
   .main__vista-principal--titulo-contacto {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 100px;
   }
 
   .main__vista-principal--titulo-contacto-span {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .section-contacto {
@@ -498,12 +494,11 @@ main {
   }
 
   .section-contacto__article--parrafo {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .section-contacto__article--numero-parrafo,
-  .section-contacto__article--correo-parrafo,
   .section-contacto__article--calle-parrafo {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
 
@@ -533,24 +528,27 @@ main {
 /* --- CELULARES PEQUEÑOS (hasta 480px) --- */
 @media (max-width: 480px) {
   .main__vista-principal--contacto {
-    height: 250px;
+    height: 200px;
   }
 
   .main__vista-principal--titulo-contacto {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding-top: 100px;
   }
 
   .main__vista-principal--titulo-contacto-span {
-    font-size: 1.4rem;
+    font-size: 2rem;
+  }
+  .section-contacto {
+   padding-bottom: 0;
   }
   .section-contacto__article--parrafo {
     font-size: 1.3rem;
   }
   .section-contacto__article--numero-parrafo,
-  .section-contacto__article--correo-parrafo,
   .section-contacto__article--calle-parrafo {
-    font-size: 1rem;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
   }
   .section-contacto__article--conteiner-contacto {
     width: 200px;
@@ -558,22 +556,23 @@ main {
   }
 
   .section-contacto__article--icon {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .section-encuentranos__titulo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .section-encuentranos__titulo-span {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
   .section-encuentranos__p-horarios {
-    font-weight: bold;
-    padding-top: 20px;
+    font-size: 1.5rem;
+    padding-top: 50px;
   }
   .section-encuentranos__p-lu,
   .section-encuentranos__p-vi {
+    font-size: 1rem;
     font-weight: bold;
   }
   .mapa {
