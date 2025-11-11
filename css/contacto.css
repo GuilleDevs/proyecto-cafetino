@@ -145,6 +145,9 @@ main {
     padding-top: 30px;
   }
   
+  .proximamente {
+    font-size: 1rem;
+  }
   .section-contacto__article--conteiner-contacto {
     display: flex;
     flex-direction: column;
@@ -360,7 +363,7 @@ main {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #e9e3d4;
+    background-color: #E5DFD1;
     padding: 1rem 0;
     border-radius: 0 0 10px 10px;
   }

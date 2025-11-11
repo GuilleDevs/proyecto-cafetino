@@ -149,7 +149,9 @@ body {
 
 .blog-ruta-cafe p {
   margin-bottom: 20px;
-  text-align: justify;
+  text-align: left;
+  word-spacing: normal;
+  
 }
 
 .blog-ruta-cafe strong {
@@ -207,6 +209,9 @@ body {
   margin: 0 auto 50px;
   color: #4a3b2d;
   line-height: 1.7;
+  text-align: left;
+  word-spacing: normal;
+  letter-spacing: normal;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -296,6 +301,9 @@ body {
   font-family: "aileron", sans-serif;
   font-size: 1rem;
   line-height: 1.7;
+  text-align: left;
+  word-spacing: normal;
+  letter-spacing: normal;
 }
 
 .bloque-texto-imagen .imagen {
@@ -316,7 +324,7 @@ body {
 .bloque-video {
   background-color: #fdfaf6;
   text-align: center;
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
   margin-top: 3rem;
   border-top: 1px solid rgba(0,0,0,0.05);
 }
@@ -354,6 +362,9 @@ body {
   font-family: "aileron", sans-serif;
   font-size: 1rem;
   line-height: 1.8;
+  text-align: left;
+  word-spacing: normal;
+  letter-spacing: normal;
 }
 
 
@@ -480,7 +491,7 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #e9e3d4;
+    background-color: #E5DFD1;
     padding: 1rem 0;
     border-radius: 0 0 10px 10px;
   }
@@ -572,13 +583,13 @@ body {
 
   .bloque-texto-imagen .texto {
     text-align: left;
-    padding: 0 1rem;
+    padding: 0 0;
   }
 }
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .bloque-video {
-    padding: 2rem 1rem;
+    padding: 2rem 0
   }
 
   .bloque-video .titulo-video {
@@ -587,7 +598,7 @@ body {
 
   .bloque-video .texto-video {
     font-size: 0.95rem;
-    padding: 0 0.5rem;
+    padding: 0 0;
   }
 }
 @media (max-width: 768px) {
