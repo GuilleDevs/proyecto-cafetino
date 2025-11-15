@@ -176,6 +176,29 @@ margin-bottom: 30px;
   color: #39442D;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
 }
+.menu-link-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  padding: 10px 20px;
+}
+
+.menu-link-bottom a {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2e3d25; /* Verde oscuro que combina con el borde del menú */
+  border: 2px solid #2e3d25;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.menu-link-bottom a:hover {
+  background-color: #2e3d25;
+  color: #fff;
+}
 
 /* ===== FOOTER GENERAL ===== */
 .footer {
@@ -388,4 +411,15 @@ margin-bottom: 30px;
     font-size: 0.5rem;
   }
 }
+}
+@media (max-width: 768px) {
+  .menu-link-bottom {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .menu-link-bottom a {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
 }

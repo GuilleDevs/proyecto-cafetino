@@ -175,7 +175,6 @@ main {
     font-weight: bold;
   }
   .section-contacto__article--numero-parrafo, 
-  .section-contacto__article--correo-parrafo, 
   .section-contacto__article--calle-parrafo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -260,6 +259,7 @@ main {
   margin: 0.3rem 0 0;
   font-size: 0.95rem;
   color: #5c4a33;
+  font-weight: 300;
 }
 
 /* ===== FOOTER GENERAL ===== */

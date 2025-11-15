@@ -106,7 +106,6 @@ body {
 
 /* Estructura general */
 .sobre-nosotros {
-    /* El padding-top se ajusta al alto de la navbar */
     padding-top: 120px; 
     width: 90%;
     max-width: 1200px;
@@ -506,7 +505,6 @@ button:hover {
 
 .blog-flavor-wheel {
   max-width: 1100px;
-  
   padding: 40px;
   background: #f8f6f3;
   border-radius: 18px;
@@ -543,15 +541,6 @@ button:hover {
   display: flex;
   justify-content: center;
 }
-
-/*.flavor-image img {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
-} /*
 
 /* Imagen normal */
 .flavor-image img {

@@ -543,12 +543,6 @@ main {
     gap: 1rem;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
   .hero {
     flex-direction: column;
     padding: 0;
