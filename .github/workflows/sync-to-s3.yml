@@ -28,7 +28,9 @@ jobs:
           BUCKET: www.cafetinogeneralpico.com
         run: |
           # Sincroniza todo el repo al bucket S3, excluyendo archivos/dirs de configuración
-          aws s3 sync . s3://$BUCKET --acl public-read --delete \
+          aws s3 sync . s3://$BUCKET 
+            --delete \
+            --no-acl \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "config/*" \
