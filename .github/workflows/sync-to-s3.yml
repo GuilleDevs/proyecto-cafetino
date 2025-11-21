@@ -30,9 +30,16 @@ jobs:
           # Sincroniza todo el repo al bucket S3, excluyendo archivos/dirs de configuración
           aws s3 sync . s3://$BUCKET \
             --delete \
+            --exclude ".git" \
             --exclude ".git/*" \
+            --exclude ".git/**" \
+            --exclude "./.git/*" \
+            --exclude "./.git/**" \
             --exclude ".github/*" \
             --exclude "config/*" \
+            --exclude "config/**" \
+            --exclude "*/config/*" \
+            --exclude "*/config/**" \
             --exclude ".env" \
             --exclude "*.yml" \
             --exclude "*.yaml" \
