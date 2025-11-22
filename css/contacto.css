@@ -175,6 +175,7 @@ main {
     font-weight: bold;
   }
   .section-contacto__article--numero-parrafo, 
+  .section-contacto__article--correo-parrafo,
   .section-contacto__article--calle-parrafo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -440,6 +441,7 @@ main {
     font-size: 1.5rem;
   }
   .section-contacto__article--numero-parrafo,
+  .section-contacto__article--correo-parrafo,
   .section-contacto__article--calle-parrafo {
     font-size: 1rem;
   }
@@ -500,6 +502,7 @@ main {
     font-size: 1.8rem;
   }
   .section-contacto__article--numero-parrafo,
+  .section-contacto__article--correo-parrafo,
   .section-contacto__article--calle-parrafo {
     font-size: 1rem;
   }
@@ -549,6 +552,7 @@ main {
     font-size: 1.3rem;
   }
   .section-contacto__article--numero-parrafo,
+  .section-contacto__article--correo-parrafo,
   .section-contacto__article--calle-parrafo {
     font-size: 0.7rem;
     margin-bottom: 10px;
