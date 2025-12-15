@@ -29,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   padding: 0.8rem 2rem;
 }
 /* Contenedor logo + instagram */
@@ -50,7 +51,6 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
-
 /* ===== LOGO ===== */
 .navbar__logo img {
   height: 60px;
@@ -472,9 +472,8 @@ main {
 /* --- TABLET Y CELULAR --- */
 @media (max-width: 900px) {
   .navbar__container {
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-
   .menu-icon {
     display: block;
   }
@@ -631,7 +630,8 @@ main {
         /* Moverse a la izquierda el ancho de los 7 elementos */
         transform: translateX(-1550px); 
     }
-}
+    }
+    
 }
 @media (max-width: 425px) {
     /* 2. Definición de la animación */
@@ -647,8 +647,5 @@ main {
         transform: translateX(-1550px); 
     }
   }
-  .navbar__instagram img {
-    width: 40px;
-    height: 40px;
-  }
+  
 }

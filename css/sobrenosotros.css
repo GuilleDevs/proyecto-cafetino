@@ -839,7 +839,6 @@ button:hover {
 /* --- TABLET Y CELULAR --- */
 @media (max-width: 900px) {
     .navbar__container {
-        flex-wrap: wrap;
         /* FIX: Asegura un padding razonable en el contenedor de la navbar */
         padding: 0.8rem 1rem;
     }
@@ -909,6 +908,9 @@ button:hover {
 
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
+    .navbar__container {
+      flex-wrap: wrap;
+    }
     .bloque {
         /* Se mantiene con !important por si hay conflicto de especificidad */
         flex-direction: column !important; 

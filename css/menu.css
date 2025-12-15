@@ -313,8 +313,7 @@ margin-bottom: 30px;
 @media (max-width: 900px) {
   .navbar__container {
     flex-wrap: wrap;
-  }
-
+    }
   .menu-icon {
     display: block;
   }

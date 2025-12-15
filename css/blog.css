@@ -50,7 +50,6 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
-
 /* ===== LOGO ===== */
 .navbar__logo img {
   height: 60px;
@@ -498,9 +497,8 @@ body {
 /* --- TABLET Y CELULAR --- */
 @media (max-width: 900px) {
   .navbar__container {
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-
   .menu-icon {
     display: block;
   }
@@ -650,8 +648,9 @@ body {
   .blog-ruta-cafe blockquote {
     font-size: 1rem;
   }
+  
   .navbar__instagram img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 }

@@ -370,9 +370,13 @@ main {
 /* --- TABLET Y CELULAR --- */
 @media (max-width: 900px) {
   .navbar__container {
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 900px) {
+  .navbar__container {
     flex-wrap: wrap;
   }
-
   .menu-icon {
     display: block;
   }
