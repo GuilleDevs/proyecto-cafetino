@@ -31,6 +31,25 @@ body {
   justify-content: space-between;
   padding: 0.8rem 2rem;
 }
+/* Contenedor logo + instagram */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icono Instagram */
+.navbar__instagram img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__instagram:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
 
 /* ===== LOGO ===== */
 .navbar__logo img {
@@ -529,6 +548,11 @@ body {
     height: auto;
   }
 
+  .navbar__instagram img {
+    width: 45px;
+    height: 45px;
+  }
+
   .container {
     flex-direction: column;
     align-items: center;
@@ -625,5 +649,9 @@ body {
 
   .blog-ruta-cafe blockquote {
     font-size: 1rem;
+  }
+  .navbar__instagram img {
+    width: 45px;
+    height: 45px;
   }
 }

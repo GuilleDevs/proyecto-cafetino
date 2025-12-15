@@ -31,6 +31,25 @@ body {
   justify-content: space-between;
   padding: 0.8rem 2rem;
 }
+/* Contenedor logo + instagram */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icono Instagram */
+.navbar__instagram img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__instagram:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
 
 /* ===== LOGO ===== */
 .navbar__logo img {
@@ -536,7 +555,10 @@ main {
   header {
     height: auto;
   }
-
+  .navbar__instagram img {
+    width: 45px;
+    height: 45px;
+  }
   .container {
     flex-direction: column;
     align-items: center;
@@ -624,5 +646,9 @@ main {
         /* Moverse a la izquierda el ancho de los 7 elementos */
         transform: translateX(-1550px); 
     }
+  }
+  .navbar__instagram img {
+    width: 40px;
+    height: 40px;
   }
 }

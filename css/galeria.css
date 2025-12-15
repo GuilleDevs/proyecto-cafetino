@@ -32,6 +32,26 @@ body {
     padding: 0.8rem 2rem;
 }
 
+/* Contenedor logo + instagram */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icono Instagram */
+.navbar__instagram img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__instagram:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* ===== LOGO ===== */
 .navbar__logo img {
     height: 60px;
@@ -898,6 +918,10 @@ body {
     .hero-galeria .hero-phrase {
         font-size: 1.2rem;
     }
+    .navbar__instagram img {
+    width: 45px;
+    height: 45px;
+    }
 }
 /* Responsividad */
 @media (max-width: 768px) {
@@ -931,6 +955,10 @@ body {
     }
     .hero-galeria .hero-phrase {
         font-size: 1rem;
+    }
+    .navbar__instagram img {
+    width: 45px;
+    height: 45px;
     }
 }
 /* 📱 Tablets (hasta 1024px) */
