@@ -6,21 +6,22 @@
 }
 
 body {
-    font-family: "aileron", sans-serif;
-    font-weight: 200;
-    background-color: #F9F6F2;
-    color: #39442d;
+  font-family: "aileron", sans-serif;
+  font-weight: 200;
+  background-color: #F9F6F2;
+  color: #39442d;
 }
 
 /* ===== NAVBAR GENERAL ===== */
 .navbar {
-  background-color: #E5DFD1; /* beige */
+  background-color: #E5DFD1;
+  /* beige */
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar__container {
@@ -31,6 +32,7 @@ body {
   justify-content: space-between;
   padding: 0.8rem 2rem;
 }
+
 /* Contenedor logo + instagram */
 .navbar__brand {
   display: flex;
@@ -50,6 +52,7 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
+
 /* ===== LOGO ===== */
 .navbar__logo img {
   height: 60px;
@@ -63,7 +66,8 @@ body {
 }
 
 .navbar__links a {
-  color: #063a34; /* verde oscuro */
+  color: #063a34;
+  /* verde oscuro */
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
@@ -71,29 +75,35 @@ body {
 }
 
 .navbar__links a:hover {
-  color: #a76b32; /* marrón */
+  color: #a76b32;
+  /* marrón */
 }
+
 .navbar-efecto {
-    color: #39442D;
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-  }
-.navbar-efecto::after, .header__navbar::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #BB8F60;
-    transform: scaleX(0);
-    transform-origin:bottom right;
-    transition: transform 0.4s ease-out;
-  }
-.navbar-efecto:hover::after, .header__navbar:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  color: #39442D;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-efecto::after,
+.header__navbar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #BB8F60;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.navbar-efecto:hover::after,
+.header__navbar:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* ===== MENÚ HAMBURGUESA ===== */
@@ -128,7 +138,8 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 100px 20px;
-  color: #3b2f2f; /* marrón oscuro */
+  color: #3b2f2f;
+  /* marrón oscuro */
   font-family: "aileron", sans-serif;
   font-weight: 300;
   line-height: 1.8;
@@ -136,27 +147,29 @@ body {
 }
 
 .section-title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #4b2c20;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-  }
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #4b2c20;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
 
 .section-title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #c5a26e;
-    margin: 15px auto 0;
-    border-radius: 2px;
-  }
-.negrito {
-    color: #4b2c20;
-    font-weight: bold;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #c5a26e;
+  margin: 15px auto 0;
+  border-radius: 2px;
 }
+
+.negrito {
+  color: #4b2c20;
+  font-weight: bold;
+}
+
 .blog-ruta-cafe h3 {
   text-align: center;
   font-weight: 400;
@@ -169,7 +182,7 @@ body {
   margin-bottom: 20px;
   text-align: left;
   word-spacing: normal;
-  
+
 }
 
 .blog-ruta-cafe strong {
@@ -206,6 +219,7 @@ body {
   border-left: 4px solid #b89a7b;
   padding-left: 15px;
 }
+
 .blog-ruta-cafe {
   text-align: center;
 }
@@ -245,7 +259,7 @@ body {
 .ruta-cafe-contenido .foto img {
   width: 400px;
   border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* INSTAGRAM LISTA */
@@ -255,7 +269,7 @@ body {
   background: #f8f6f3;
   border-radius: 14px;
   padding: 25px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cafeterias-instagram h4 {
@@ -271,8 +285,10 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  columns: 2;              /* 👉 divide en dos columnas */
-  column-gap: 30px;        /* espacio entre columnas */
+  columns: 2;
+  /* 👉 divide en dos columnas */
+  column-gap: 30px;
+  /* espacio entre columnas */
 }
 
 .cafeterias-instagram li {
@@ -290,26 +306,29 @@ body {
   color: #b4753f;
   transform: translateX(5px);
 }
-.highlight {
-    background-color: #fff8ef;
-    border-left: 5px solid #c5a26e;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #4b2c20;
-    padding: 20px;
-    margin-top: 40px;
-    text-align: center;
-    font-style: italic;
-  }
 
-  .bloque-texto-imagen {
+.highlight {
+  background-color: #fff8ef;
+  border-left: 5px solid #c5a26e;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #4b2c20;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-style: italic;
+}
+
+.bloque-texto-imagen {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: #fdfaf6; /* mismo tono del fondo */
+  background-color: #fdfaf6;
+  /* mismo tono del fondo */
   padding: 2rem 0;
-  flex-wrap: wrap; /* hace que se adapte a pantallas pequeñas */
+  flex-wrap: wrap;
+  /* hace que se adapte a pantallas pequeñas */
 }
 
 .bloque-texto-imagen .texto {
@@ -334,7 +353,7 @@ body {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   object-fit: cover;
 }
 
@@ -344,7 +363,7 @@ body {
   text-align: center;
   padding: 3rem 0;
   margin-top: 3rem;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .bloque-video .titulo-video {
@@ -385,7 +404,39 @@ body {
   letter-spacing: normal;
 }
 
+.ruta-cafe-post {
+  max-width: 1100px;
+  margin: 0 auto 0;
+  padding: 0 40px;
+  font-family: "aileron", sans-serif;
+  background: transparent;
+  text-align: center;
+}
 
+.ruta-titulo {
+  font-family: "aileron", sans-serif;
+  font-size: 1.6rem;
+  color: #3a2f25;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.ruta-subtitulo {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: #9b8b6e;
+  margin-bottom: 60px;
+}
+
+.ruta-imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
 
 
 
@@ -397,7 +448,7 @@ body {
   font-weight: 600;
   text-align: center;
   padding-top: 40px;
-  
+
 }
 
 /* ===== CONTENIDO PRINCIPAL ===== */
@@ -415,7 +466,7 @@ body {
 .footer-section {
   flex: 1;
   min-width: 220px;
-  text-align:center;
+  text-align: center;
 }
 
 .footer-section h4 {
@@ -464,16 +515,17 @@ body {
 
 /* 2. Definición de la animación */
 @keyframes slide {
-    /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
-    from {
-        transform: translateX(0);
-    }
-    
-    /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
-    to {
-        /* Moverse a la izquierda el ancho de los 7 elementos */
-        transform: translateX(-550px); 
-    }
+
+  /* 0% (Inicio): Mostrar el primer set de 7 imágenes */
+  from {
+    transform: translateX(0);
+  }
+
+  /* 100% (Fin): Desplazarse exactamente el ancho de un set (7 imágenes * 600px = 4200px) */
+  to {
+    /* Moverse a la izquierda el ancho de los 7 elementos */
+    transform: translateX(-550px);
+  }
 }
 
 
@@ -497,8 +549,9 @@ body {
 /* --- TABLET Y CELULAR --- */
 @media (max-width: 900px) {
   .navbar__container {
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
+
   .menu-icon {
     display: block;
   }
@@ -520,7 +573,7 @@ body {
   }
 
   /* Mostrar menú al activar el checkbox */
-  .menu-toggle:checked + .menu-icon + .navbar__links {
+  .menu-toggle:checked+.menu-icon+.navbar__links {
     display: flex;
   }
 
@@ -531,6 +584,7 @@ body {
   .container {
     padding: 1rem;
   }
+
   .blog-ruta-cafe {
     padding: 110px 15px;
   }
@@ -567,10 +621,12 @@ body {
     font-size: 0.9rem;
     padding: 1rem;
   }
+
   .footer-content {
     border-top: 1px solid #2a2a2a;
   }
 }
+
 /* 📱 Responsividad */
 @media (max-width: 768px) {
   .blog-ruta-cafe {
@@ -593,6 +649,7 @@ body {
     max-width: 100%;
   }
 }
+
 @media (max-width: 768px) {
   .bloque-texto-imagen {
     flex-direction: column;
@@ -608,10 +665,11 @@ body {
     padding: 0 0;
   }
 }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .bloque-video {
-    padding: 2rem 0
+    padding: 1rem 0
   }
 
   .bloque-video .titulo-video {
@@ -623,11 +681,13 @@ body {
     padding: 0 0;
   }
 }
+
 @media (max-width: 768px) {
   .cafeterias-instagram ul {
     columns: 1;
   }
 }
+
 @media (max-width: 480px) {
   .cafeterias-instagram ul {
     columns: 1;
@@ -636,11 +696,13 @@ body {
 
 @media (max-width: 480px) {
   .blog-ruta-cafe {
-    padding: 100px 12px;
+    padding: 100px 12px 30px;
   }
+
   .blog-ruta-cafe h2 {
     font-size: 1.4rem;
   }
+
   .blog-ruta-cafe p {
     font-size: 0.95rem;
   }
@@ -648,9 +710,42 @@ body {
   .blog-ruta-cafe blockquote {
     font-size: 1rem;
   }
-  
+
   .navbar__instagram img {
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ruta-titulo {
+    font-size: 38px;
+  }
+
+  .ruta-subtitulo {
+    margin-bottom: 40px;
+  }
+
+  .ruta-cafe-post {
+    padding: 0 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .ruta-titulo {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .ruta-subtitulo {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+
+  .ruta-cafe-post {
+
+    margin-bottom: 70px;
   }
 }
