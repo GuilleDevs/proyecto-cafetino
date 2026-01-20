@@ -444,7 +444,21 @@ margin-bottom: 30px;
   .menu-link-bottom a {
     font-size: 0.9rem;
     padding: 6px 14px;
+    /* 👇 hover aplicado por defecto */
+    background-color: #2e3d25;
+    color: #fff;
+
+    /* 👇 elimina el efecto */
+    transition: none;
   }
+
+  /* 👇 evita cualquier cambio al tocar */
+  .menu-link-bottom a:hover {
+    background-color: #2e3d25;
+    color: #fff;
+  }
+  
+  
   .navbar__instagram img {
     width: 45px;
     height: 45px;
