@@ -465,6 +465,40 @@ main {
   color: #cfcfcf;
   font-size: 12px;
 }
+
+/* Credito del desarrollador */
+.footer-credit {
+  padding: 14px 10px;
+  background-color: #2f3826;
+  text-align: center;
+}
+
+.footer-credit a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #cfcfcf;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-credit a:hover {
+  color: #ffffff;
+}
+
+.footer-credit i {
+  color: #25d366;
+  font-size: 16px;
+}
+
+.footer-credit strong {
+  color: #e8e0d0;
+  font-weight: 600;
+}
+
 /* =========================
   MEDIA QUERIES RESPONSIVE NAVBAR
 ========================= */
