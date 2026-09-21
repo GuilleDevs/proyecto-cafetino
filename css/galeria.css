@@ -51,6 +51,33 @@ body {
   transform: scale(1.1);
 }
 
+/* Puesto en el ranking The Best Coffee Shops */
+.navbar__instagram {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar__ranking {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background-color: #39442d;
+  color: #e5dfd1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.navbar__ranking:hover {
+  background-color: #bb8f60;
+}
+
 /* ===== LOGO ===== */
 .navbar__logo img {
   height: 60px;
